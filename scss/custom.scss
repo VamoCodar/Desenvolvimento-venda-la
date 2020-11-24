@@ -1,0 +1,109 @@
+//alterações variveis e tema do bootstrap
+
+//mixins
+@mixin degrade {
+  //degrade dos botoes
+  background: transparent linear-gradient(270deg, #92d275 0%, #19d9b4e6 100%) 0%
+    0% no-repeat padding-box;
+}
+
+@mixin degrade-bg {
+  background: transparent linear-gradient(60deg, #7d8dff 0%, #56cbff 100%) 0% 0%
+    no-repeat padding-box;
+}
+//estilo do botao
+@mixin botao($tamanho: 18px) {
+  @include degrade;
+  border: none;
+  border-radius: $border-radius;
+  padding: 10px 15px;
+  color: $white;
+  font-family: $poppins;
+  font-size: $tamanho;
+  font-weight: 500;
+  transition: 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.06);
+  }
+}
+
+//variaveis
+$open-sans: "Open Sans", sans-serif;
+$poppins: "Poppins", sans-serif;
+$rubik: "Rubik", sans-serif;
+
+//imports bootstrap
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/root";
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+@import "bootstrap/button-group";
+@import "bootstrap/input-group";
+@import "bootstrap/custom-forms";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/card";
+@import "bootstrap/breadcrumb";
+@import "bootstrap/pagination";
+@import "bootstrap/badge";
+@import "bootstrap/jumbotron";
+@import "bootstrap/alert";
+@import "bootstrap/progress";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/close";
+@import "bootstrap/toasts";
+@import "bootstrap/modal";
+@import "bootstrap/tooltip";
+@import "bootstrap/popover";
+@import "bootstrap/carousel";
+@import "bootstrap/spinners";
+@import "bootstrap/utilities";
+@import "bootstrap/print";
+
+//import arquivos sass
+@import "meu-reset";
+@import "responsivo";
+@import "menu";
+@import "intro";
+@import "animations";
+
+//variaveis bootstrap
+$navbar-light-color: transparent;
+$border-radius: 10px;
+$dropdown-border-color: transparent;
+
+body {
+  font-family: $rubik;
+  height: 3000px;
+  transition: 0.3s ease;
+}
+.container {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+//estilo botão
+.btn-whats {
+  @include botao(16px);
+}
+.btn-whats:before {
+  content: "";
+  background-image: url(../img/icon/whats.svg);
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+}

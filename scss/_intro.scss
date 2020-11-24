@@ -1,0 +1,17 @@
+//seção entrada robo
+.intro {
+  height: 750px;
+  width: 100%;
+  @include degrade-bg;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);
+
+  .content-intro {
+    align-items: center;
+    height: 700px;
+  }
+}
+
+//intro texto
+.intro h1 {
+  font-family: $poppins;
+}
