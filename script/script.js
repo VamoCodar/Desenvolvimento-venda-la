@@ -13,7 +13,7 @@ function checagem() {
 }
 checagem();
 
-//mesma funçao só que no resize
+//mesma funçao de checagem só que no resize
 function resize() {
   if (window.innerWidth >= 1000) {
     body.classList.add("desktop");
@@ -39,6 +39,7 @@ function ativaMenu() {
     }, 300);
   }
 }
+//preenchimento do menu ao rolar o scrool
 function menuPreenchido() {
   const menuFixo = document.querySelectorAll(".fixed-top");
   menuFixo.forEach((i) => {

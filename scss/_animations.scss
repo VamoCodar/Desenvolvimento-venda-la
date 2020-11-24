@@ -17,3 +17,25 @@
     top: -500px;
   }
 }
+
+@keyframes pula-pula {
+  0% {
+    opacity: 0%;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pula-pula2 {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
