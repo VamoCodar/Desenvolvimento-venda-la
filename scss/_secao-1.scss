@@ -1,0 +1,13 @@
+/* Os maiores marketplaces
+integrados em um só lugar */
+
+.secao-1 {
+  h1 {
+    font-weight: 500;
+    font-family: $poppins;
+    font-size: 32px;
+    @include d(s) {
+      font-size: 26px;
+    }
+  }
+}

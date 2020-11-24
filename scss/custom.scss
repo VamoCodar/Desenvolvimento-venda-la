@@ -75,9 +75,10 @@ $rubik: "Rubik", sans-serif;
 //import arquivos sass
 @import "meu-reset";
 @import "responsivo";
+@import "animations";
 @import "menu";
 @import "intro";
-@import "animations";
+@import "secao-1";
 
 //variaveis bootstrap
 $navbar-light-color: transparent;
@@ -91,6 +92,7 @@ body {
 .container {
   padding-right: 25px;
   padding-left: 25px;
+  position: relative;
 }
 
 //estilo botão

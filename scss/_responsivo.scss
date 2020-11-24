@@ -1,22 +1,22 @@
 //variaveis do grid
 
 $l-device: 1140px; //large
-$m-device: 720px; //medium
+$m-device: 993px; //medium
 $s-device: 540px; //small
 $ss-device: 370px; //small small
 
 //mixin media querie
 @mixin d($size) {
   @if $size==l {
-    @media screen and (min-width: $l-device) {
+    @media screen and (min-width: $m-device) {
       @content;
     }
   } @else if $size==m {
-    @media screen and (min-width: $m-device) and (max-width: $l-device - 1) {
+    @media screen and (max-width: $m-device - 1) {
       @content;
     }
   } @else if $size==s {
-    @media screen and (max-width: $m-device - 1) {
+    @media screen and (max-width: $s-device - 1) {
       @content;
     }
   } @else if $size==ss {

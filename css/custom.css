@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -9703,6 +9704,46 @@ m: 760px A 1200px;
 s: 480px;
 ss: 370px;
 */
+@keyframes desceMenu {
+  0% {
+    opacity: 0;
+    top: -300px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes sobeMenu {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -500px;
+  }
+}
+
+@keyframes pula-pula {
+  0% {
+    opacity: 0%;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pula-pula2 {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
 .logo {
   background-image: url(../img/logos/venda.la-wite.svg);
   background-repeat: no-repeat;
@@ -9944,6 +9985,39 @@ a.dropdown-item {
   padding-top: 200px;
 }
 
+@media screen and (max-width: 992px) {
+  .intro .content-intro {
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .intro .content-intro {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .intro {
+    height: 900px;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .intro {
+    height: 800px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .textos {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+
 .intro {
   position: relative;
 }
@@ -9954,13 +10028,32 @@ a.dropdown-item {
   font-weight: 500;
 }
 
+@media screen and (max-width: 992px) {
+  .intro h1 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 369px) {
+  .intro h1 {
+    font-size: 32px;
+  }
+}
+
 .intro p {
   margin-bottom: 20px;
   color: #fff;
   font-size: 18px;
+  max-width: 400px;
 }
 
-.btn-degrade {
+@media screen and (max-width: 992px) {
+  .intro p {
+    text-align: center;
+  }
+}
+
+.intro .btn-degrade {
   background: transparent linear-gradient(270deg, #92d275 0%, #19d9b4e6 100%) 0% 0% no-repeat padding-box;
   border: none;
   border-radius: 10px;
@@ -9973,9 +10066,19 @@ a.dropdown-item {
   padding: 12px 15px;
 }
 
-.btn-degrade:hover {
+.intro .btn-degrade:hover {
   transform: scale(1.1);
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.06);
+}
+
+@media screen and (max-width: 539px) {
+  .intro .btn-degrade {
+    margin: 0 auto;
+  }
+}
+
+.robo {
+  width: 800px;
 }
 
 .container-robo {
@@ -9985,80 +10088,124 @@ a.dropdown-item {
   z-index: -10;
 }
 
-@media screen and (max-width: 719px) {
+@media screen and (min-width: 993px) {
+  .container-robo .cards {
+    background-image: url(../img/cards-intro/shoptime.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 55px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: 300px;
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.2s;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .container-robo .card1 {
+    background-image: url(../img/cards-intro/amazon.svg);
+    right: 400px;
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
+    top: 80px;
+  }
+  .container-robo .card2 {
+    background-image: url(../img/cards-intro/extra.svg);
+    right: 230px;
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2.8s infinite alternate-reverse ease-in-out 2.2s;
+    top: 180px;
+  }
+  .container-robo .card3 {
+    background-image: url(../img/cards-intro/americanas.svg);
+    right: 450px;
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2.2s infinite alternate-reverse ease-in-out 2.4s;
+    top: 160px;
+  }
+  .container-robo .card4 {
+    background-image: url(../img/cards-intro/madeiramadeira.svg);
+    right: 500px;
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
+    top: 100px;
+  }
+  .container-robo .card5 {
+    background-image: url(../img/cards-intro/magalu.svg);
+    right: 515px;
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.4s;
+    top: 180px;
+  }
+  .container-robo .card6 {
+    background-image: url(../img/cards-intro/mercado-livre.svg);
+    right: 280px;
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.4s;
+    top: 240px;
+  }
+  .container-robo .card7 {
+    background-image: url(../img/cards-intro/ponto-frio.svg);
+    right: 200px;
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
+    top: 270px;
+  }
+  .container-robo .card8 {
+    background-image: url(../img/cards-intro/submarino.svg);
+    right: 460px;
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
+    top: 30px;
+  }
+  .container-robo .card10 {
+    background-image: url(../img/cards-intro/casas-bahia.svg);
+    right: 200px;
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2.4s infinite alternate-reverse ease-in-out 2.2s;
+    top: 90px;
+  }
+}
+
+@media screen and (max-width: 992px) {
   .container-robo {
+    position: relative;
     order: -1;
+    top: 0px;
+    margin-left: -30px;
   }
 }
 
-.robo {
-  width: 850px;
+/* .container-robo {
+  @include d(s) {
+    .cards {
+      background-image: url(../img/cards-intro/extra.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 35px;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 20%;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.2s;
+    }
+    .card1 {
+      background-image: url(../img/cards-intro/amazon.svg);
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
+      top: 21%;
+      right: 60px;
+    }
+  }
+} */
+/* Os maiores marketplaces
+integrados em um só lugar */
+.secao-1 h1 {
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
 }
 
-.container-robo .cards {
-  background-image: url(../img/cards-intro/shoptime.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 55px;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 100px;
-  right: 300px;
-  animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.2s;
-}
-
-.container-robo .card1 {
-  background-image: url(../img/cards-intro/amazon.svg);
-  right: 400px;
-  animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
-  top: 80px;
-}
-
-.container-robo .card2 {
-  background-image: url(../img/cards-intro/extra.svg);
-  right: 230px;
-  animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2.8s infinite alternate-reverse ease-in-out 2.2s;
-  top: 180px;
-}
-
-@keyframes desceMenu {
-  0% {
-    opacity: 0;
-    top: -300px;
-  }
-  100% {
-    opacity: 1;
-    top: 0;
-  }
-}
-
-@keyframes sobeMenu {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -500px;
-  }
-}
-
-@keyframes pula-pula {
-  0% {
-    opacity: 0%;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 100%;
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes pula-pula2 {
-  0% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(-10px);
+@media screen and (max-width: 539px) {
+  .secao-1 h1 {
+    font-size: 26px;
   }
 }
 
@@ -10071,6 +10218,7 @@ body {
 .container {
   padding-right: 25px;
   padding-left: 25px;
+  position: relative;
 }
 
 .btn-whats {

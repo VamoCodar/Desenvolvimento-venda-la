@@ -8,6 +8,26 @@
   .content-intro {
     align-items: center;
     padding-top: 200px;
+    @include d(m) {
+      padding-top: 120px;
+    }
+    @include d(s) {
+      padding-top: 100px;
+    }
+  }
+  @include d(m) {
+    height: 900px;
+  }
+  @include d(s) {
+    height: 800px;
+  }
+}
+.textos {
+  @include d(m) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
   }
 }
 
@@ -18,64 +38,164 @@
     font-family: $poppins;
     margin-bottom: 20px;
     font-weight: 500;
+    @include d(m) {
+      text-align: center;
+    }
+    @include d(ss) {
+      font-size: 32px;
+    }
   }
   p {
     margin-bottom: 20px;
     color: $white;
     font-size: 18px;
+    max-width: 400px;
+    @include d(m) {
+      text-align: center;
+    }
+  }
+  .btn-degrade {
+    @include botao(16px);
+    padding: 12px 15px;
+    @include d(s) {
+      margin: 0 auto;
+    }
   }
 }
 
 //cta
-.btn-degrade {
-  @include botao(16px);
-  padding: 12px 15px;
-}
-//robo
-.container-robo {
-  position: absolute;
-  right: 20px;
-  top: 120px;
 
-  z-index: -10;
-  @include d(s) {
-    order: -1;
-  }
-}
+//robo
+
 .robo {
-  width: 850px;
+  width: 800px;
 }
 
 //cards
 
 .container-robo {
+  position: absolute;
+  right: 20px;
+  top: 120px;
+  z-index: -10;
+
+  //estilos gerais cards
   .cards {
-    background-image: url(../img/cards-intro/shoptime.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 55px;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 100px;
-    right: 300px;
-    animation: pula-pula 1.2s both ease-in-out 1s,
-      pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.2s;
+    @include d(l) {
+      background-image: url(../img/cards-intro/shoptime.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 55px;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 100px;
+      right: 300px;
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.2s;
+    }
   }
 }
+//animaçao desktop
+//cards individuais
 .container-robo {
-  .card1 {
-    background-image: url(../img/cards-intro/amazon.svg);
-    right: 400px;
-    animation: pula-pula 1.2s both ease-in-out 1s,
-      pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
-    top: 80px;
+  @include d(l) {
+    .card1 {
+      background-image: url(../img/cards-intro/amazon.svg);
+      right: 400px;
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
+      top: 80px;
+    }
+    .card2 {
+      background-image: url(../img/cards-intro/extra.svg);
+      right: 230px;
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2.8s infinite alternate-reverse ease-in-out 2.2s;
+      top: 180px;
+    }
+    .card3 {
+      background-image: url(../img/cards-intro/americanas.svg);
+      right: 450px;
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2.2s infinite alternate-reverse ease-in-out 2.4s;
+      top: 160px;
+    }
+    .card4 {
+      background-image: url(../img/cards-intro/madeiramadeira.svg);
+      right: 500px;
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
+      top: 100px;
+    }
+    .card5 {
+      background-image: url(../img/cards-intro/magalu.svg);
+      right: 515px;
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.4s;
+      top: 180px;
+    }
+    .card6 {
+      background-image: url(../img/cards-intro/mercado-livre.svg);
+      right: 280px;
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.4s;
+      top: 240px;
+    }
+    .card7 {
+      background-image: url(../img/cards-intro/ponto-frio.svg);
+      right: 200px;
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
+      top: 270px;
+    }
+    .card8 {
+      background-image: url(../img/cards-intro/submarino.svg);
+      right: 460px;
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
+      top: 30px;
+    }
+    .card10 {
+      background-image: url(../img/cards-intro/casas-bahia.svg);
+      right: 200px;
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2.4s infinite alternate-reverse ease-in-out 2.2s;
+      top: 90px;
+    }
   }
-  .card2 {
-    background-image: url(../img/cards-intro/extra.svg);
-    right: 230px;
-    animation: pula-pula 1.2s both ease-in-out 1s,
-      pula-pula2 2.8s infinite alternate-reverse ease-in-out 2.2s;
-    top: 180px;
+  @include d(m) {
+    position: relative;
+    order: -1;
+    top: 0px;
+    margin-left: -30px;
   }
 }
+
+//animação mobile
+/* .container-robo {
+  @include d(s) {
+    .cards {
+      background-image: url(../img/cards-intro/extra.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 35px;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 20%;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.2s;
+    }
+    .card1 {
+      background-image: url(../img/cards-intro/amazon.svg);
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
+      top: 21%;
+      right: 60px;
+    }
+  }
+} */

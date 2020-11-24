@@ -43,10 +43,10 @@ function ativaMenu() {
 function menuPreenchido() {
   const menuFixo = document.querySelectorAll(".fixed-top");
   menuFixo.forEach((i) => {
-    if (window.pageYOffset >= 200) {
+    if (window.pageYOffset >= 100) {
       body.classList.add("ativoScrool");
       i.setAttribute("style", "background-color: white;");
-    } else if (window.pageYOffset < 200) {
+    } else if (window.pageYOffset < 100) {
       i.removeAttribute("style", "background-color");
       body.classList.remove("ativoScrool");
     }
