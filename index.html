@@ -83,42 +83,20 @@
             </div>
         </div>
     </section>
+    <!-- fim da seção INTRO do robo -->
+
     <section class="secao-1 mt-5">
         <div>
             <h1 class="text-center ">
                 Os<strong> maiores marketplaces</strong><br>
                 <strong>integrados</strong> em um só lugar</h1>
         </div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <ul class="col-lg-4 text-center">
-                    <li>teste</li>
-                    <li>teste</li>
-                    <li>teste</li>
-                    <li>teste</li>
-                    <li>teste</li>
-                </ul>
 
-                <ul class="col-lg-4 text-center">
-                    <li>teste</li>
-                    <li>teste</li>
-                    <li>teste</li>
-                    <li>teste</li>
-                    <li>teste</li>
-                </ul>
 
-                <ul class="col-lg-4 text-center">
-                    <li>teste</li>
-                    <li>teste</li>
-                    <li>teste</li>
-                    <li>teste</li>
-                    <li>teste</li>
-                </ul>
-            </div>
-        </div>
+
     </section>
 
-    <!-- fim da seção intro do robo -->
+
 
 
 
@@ -160,6 +138,24 @@
 
         }
 
+        /* script para colocar a imagem em cima do video */
+        $(function () {
+            var videos = $(".video");
+
+            videos.on("click", function () {
+                var elm = $(this),
+                    conts = elm.contents(),
+                    le = conts.length,
+                    ifr = null;
+
+                for (var i = 0; i < le; i++) {
+                    if (conts[i].nodeType == 8) ifr = conts[i].textContent;
+                }
+
+                elm.addClass("player").html(ifr);
+                elm.off("click");
+            });
+        }); 
     </script>
 
 </body>
