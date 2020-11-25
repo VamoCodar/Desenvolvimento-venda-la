@@ -39,3 +39,12 @@
     transform: translateY(-10px);
   }
 }
+
+@mixin cards-animation($valor) {
+  animation-name: cards-animation;
+  @keyframes cards-animation {
+    100% {
+      transform: translateX($valor);
+    }
+  }
+}

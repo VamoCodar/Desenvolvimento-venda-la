@@ -10211,7 +10211,7 @@ integrados em um só lugar */
 
 .grid-container {
   display: grid;
-  grid-template-columns: minmax(100px, 1fr) auto minmax(100px, 1fr);
+  grid-template-columns: minmax(120px, 1fr) auto minmax(120px, 1fr);
   justify-content: center;
 }
 
@@ -10240,7 +10240,7 @@ integrados em um só lugar */
 
 .cards-markt li p {
   color: #7b7b7b;
-  margin: 0 5px;
+  padding: 0 70px 0px 0px;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
 }
@@ -10261,6 +10261,19 @@ integrados em um só lugar */
 
 .mobile .grid-container {
   grid-template-columns: 60px auto 60px;
+}
+
+.c-1 {
+  animation-name: cards-animation;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+
+@keyframes cards-animation {
+  100% {
+    transform: translateX(100px);
+  }
 }
 
 body {
