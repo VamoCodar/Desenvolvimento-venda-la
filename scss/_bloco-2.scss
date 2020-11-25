@@ -1,7 +1,7 @@
 /* Os maiores marketplaces
 integrados em um só lugar */
 
-.secao-1 {
+.bloco-2 {
   h1 {
     font-weight: 500;
     font-family: $poppins;
@@ -43,7 +43,7 @@ integrados em um só lugar */
 
     p {
       color: $preto-claro;
-      padding: 0 10px 0px 0px;
+      padding: 0 10px 0px 5px;
       font-size: 14px;
       font-family: $poppins;
     }
@@ -212,5 +212,19 @@ integrados em um só lugar */
 .c-12 {
   span {
     background-image: url(../img/icon-integracoes/olist.png);
+  }
+}
+
+//botao
+.btn-demonstracao {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  @include botao(16px);
+  max-width: 280px;
+  padding: 15px 10px;
+  @include d(s) {
+    font-size: 14px;
+    max-width: 250px;
   }
 }

@@ -1,0 +1,161 @@
+.bloco-3 {
+  @include degrade-bg2;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  padding-top: 160px;
+  margin-top: 90px;
+  h1 {
+    font-family: $poppins;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 700;
+
+    @include d(m) {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 26px;
+    }
+  }
+  h2 {
+    font-size: 20px;
+    font-family: $poppins;
+
+    @include d(m) {
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+  p {
+    @include d(m) {
+      text-align: center;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+  }
+}
+//segura o h1 h2 p e button
+.container-text {
+  margin-left: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  @include d(m) {
+    margin-left: 0;
+  }
+
+  //botao video
+  a {
+    text-align: center;
+    @include botao(16px);
+    padding: 15px 15px;
+    max-width: 260px;
+    @include d(m) {
+      margin-top: 30px;
+      align-self: center;
+    }
+    @include d(s) {
+      font-size: 14px;
+    }
+  }
+}
+
+.video {
+  max-width: 600px;
+
+  position: relative;
+  border-radius: 10px;
+  @include d(m) {
+    max-width: 400px;
+  }
+  @include d(s) {
+    max-width: 260px;
+  }
+  img {
+    position: absolute;
+    top: 0;
+  }
+}
+.container-video-texto {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+//DEPOIMENTOS
+.depoimentos {
+  padding-bottom: 200px;
+  h3 {
+    @include d(s) {
+      font-size: 24px;
+    }
+  }
+}
+.card-depoimento {
+  max-width: 250px;
+  text-align: center;
+  background: $white;
+  box-shadow: $box-shadow;
+  color: $black;
+  padding: 15px 10px;
+  font-family: $poppins;
+  border-radius: $border-radius;
+  margin: 0px 30px;
+  max-height: 250px;
+  @include d(s) {
+    margin: 0px;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: start;
+    margin-bottom: 25px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  h5 {
+    font-size: 14px;
+    color: $preto-claro;
+    font-weight: 400;
+  }
+
+  img {
+    margin: 0 auto 10px auto;
+    max-width: 30px;
+  }
+}
+.cards-depoimentos {
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-next {
+  border: transparent;
+  height: 50px;
+  width: 50px;
+
+  border-radius: 50%;
+  background: white;
+  box-shadow: $box-shadow;
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 0);
+  background-image: url(../img/icon/next.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.slick-prev {
+  border: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: $box-shadow;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0);
+  background-image: url(../img/icon/previous.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  white-space: pre-wrap;
+}

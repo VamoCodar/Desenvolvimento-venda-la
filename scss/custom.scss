@@ -6,6 +6,11 @@
   background: transparent linear-gradient(270deg, #92d275 0%, #19d9b4e6 100%) 0%
     0% no-repeat padding-box;
 }
+@mixin degrade-bg2 {
+  background: transparent
+    linear-gradient(51deg, #7d8dff 0%, #7a92ff 0%, #56cbff 0%, #7a92ff 100%) 0%
+    0% no-repeat padding-box;
+}
 
 @mixin degrade-bg {
   background: transparent linear-gradient(60deg, #7d8dff 0%, #56cbff 100%) 0% 0%
@@ -82,6 +87,8 @@ $azul-claro: #71a1ff;
 @import "menu";
 @import "bloco-1";
 @import "bloco-2";
+@import "bloco-3";
+@import "cards-depoimentos";
 
 //variaveis bootstrap
 $navbar-light-color: transparent;

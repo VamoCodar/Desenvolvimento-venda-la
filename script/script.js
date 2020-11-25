@@ -66,7 +66,7 @@ function animaScroll() {
 }
 
 //animação cards
-const containerCards = document.querySelector(".secao-1");
+const containerCards = document.querySelector(".bloco-2");
 
 function animaCards() {
   const cardsTop = containerCards.getBoundingClientRect().top;
@@ -75,6 +75,74 @@ function animaCards() {
     containerCards.classList.add("anima-cards");
   }
 }
+
+//carrousel slick
+$(".cards-depoimentos").slick({
+  centerMode: true,
+  infinite: true,
+  arrows: true,
+  centerPadding: "0px",
+  slidesToShow: 3,
+  slidesToScroll: 5,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        centerMode: true,
+        infinite: true,
+        arrows: true,
+        centerPadding: "50px",
+        slidesToShow: 2,
+        slidesToScroll: 5,
+      },
+    },
+    {
+      breakpoint: 993,
+      settings: {
+        centerMode: true,
+        centerPadding: "120px",
+        slidesToShow: 1,
+        slidesToScroll: 5,
+      },
+    },
+
+    {
+      breakpoint: 768,
+      settings: {
+        infinite: false,
+        arrows: false,
+        centerMode: true,
+        centerPadding: "70px",
+        slidesToShow: 1,
+        slidesToScroll: 5,
+      },
+    },
+    {
+      breakpoint: 461,
+      settings: {
+        infinite: false,
+        arrows: false,
+        centerMode: true,
+        centerPadding: "10px",
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 330,
+      settings: {
+        infinite: false,
+        arrows: false,
+        centerMode: false,
+        centerPadding: "0px",
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1200,
+      },
+    },
+  ],
+});
 
 window.addEventListener("resize", resize);
 window.addEventListener("scroll", menuPreenchido);
