@@ -59,7 +59,7 @@ const sections = document.querySelectorAll(".js-scroll");
 function animaScroll() {
   sections.forEach((section) => {
     const sectionTop = section.getBoundingClientRect().top;
-    if (sectionTop < 320) {
+    if (sectionTop < 380) {
       section.classList.add("passou");
     }
   });
