@@ -28,10 +28,12 @@
   }
 }
 
-//variaveis
+//variaveis do projeto
 $open-sans: "Open Sans", sans-serif;
 $poppins: "Poppins", sans-serif;
 $rubik: "Rubik", sans-serif;
+$box-shadow: 0px 3px 6px #00000029;
+$preto-claro: #7b7b7b;
 
 //imports bootstrap
 @import "bootstrap/functions";
@@ -77,8 +79,8 @@ $rubik: "Rubik", sans-serif;
 @import "responsivo";
 @import "animations";
 @import "menu";
-@import "intro";
-@import "secao-1";
+@import "bloco-1";
+@import "bloco-2";
 
 //variaveis bootstrap
 $navbar-light-color: transparent;

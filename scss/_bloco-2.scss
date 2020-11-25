@@ -1,0 +1,69 @@
+/* Os maiores marketplaces
+integrados em um só lugar */
+
+.secao-1 {
+  h1 {
+    font-weight: 500;
+    font-family: $poppins;
+    font-size: 32px;
+    @include d(s) {
+      font-size: 26px;
+    }
+  }
+}
+
+//estrutura, cards e imagem
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) auto minmax(100px, 1fr);
+  justify-content: center;
+}
+
+//lista de cards
+.cards-markt {
+  display: grid;
+  justify-content: center;
+  li {
+    box-shadow: $box-shadow;
+    height: 60px;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    span {
+      width: 50px;
+      height: 40px;
+      display: inline-block;
+      background-image: url(../img/icon-integracoes/amazon.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    p {
+      color: $preto-claro;
+      margin: 0 5px;
+      font-size: 14px;
+      font-family: $poppins;
+    }
+  }
+}
+.img-people {
+  align-self: center;
+}
+//versão mobile
+.mobile .cards-markt {
+  li {
+    margin-bottom: 15px;
+    max-width: 60px;
+    max-height: 50px;
+
+    p {
+      display: none;
+    }
+  }
+}
+
+.mobile .grid-container {
+  grid-template-columns: 60px auto 60px;
+}

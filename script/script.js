@@ -52,6 +52,7 @@ function menuPreenchido() {
     }
   });
 }
+menuPreenchido();
 
 window.addEventListener("resize", resize);
 window.addEventListener("scroll", menuPreenchido);

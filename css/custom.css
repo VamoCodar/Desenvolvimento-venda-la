@@ -7435,7 +7435,7 @@ button.bg-dark:focus {
 }
 
 .shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0px 3px 6px #00000029 !important;
 }
 
 .shadow-lg {
@@ -9760,7 +9760,7 @@ ss: 370px;
 }
 
 .navbar-top {
-  transition: 0.4s ease;
+  transition: 0.2s ease;
   padding: 5px 0;
 }
 
@@ -10207,6 +10207,60 @@ integrados em um só lugar */
   .secao-1 h1 {
     font-size: 26px;
   }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) auto minmax(100px, 1fr);
+  justify-content: center;
+}
+
+.cards-markt {
+  display: grid;
+  justify-content: center;
+}
+
+.cards-markt li {
+  box-shadow: 0px 3px 6px #00000029;
+  height: 60px;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.cards-markt li span {
+  width: 50px;
+  height: 40px;
+  display: inline-block;
+  background-image: url(../img/icon-integracoes/amazon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cards-markt li p {
+  color: #7b7b7b;
+  margin: 0 5px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.img-people {
+  align-self: center;
+}
+
+.mobile .cards-markt li {
+  margin-bottom: 15px;
+  max-width: 60px;
+  max-height: 50px;
+}
+
+.mobile .cards-markt li p {
+  display: none;
+}
+
+.mobile .grid-container {
+  grid-template-columns: 60px auto 60px;
 }
 
 body {
