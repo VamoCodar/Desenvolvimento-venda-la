@@ -9744,6 +9744,119 @@ ss: 370px;
   }
 }
 
+@keyframes cards-animation1 {
+  100% {
+    transform: translateX(80px);
+  }
+}
+
+@keyframes cards-animation2 {
+  100% {
+    transform: translateX(60px);
+  }
+}
+
+@keyframes cards-animation3 {
+  100% {
+    transform: translateX(40px);
+  }
+}
+
+@keyframes cards-animation6 {
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+@keyframes cards-m-animation1 {
+  100% {
+    transform: translateX(40px);
+  }
+}
+
+@keyframes cards-m-animation2 {
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes cards-m-animation3 {
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes cards-m-animation6 {
+  100% {
+    transform: translateX(60px);
+  }
+}
+
+@keyframes cards-animation6-r {
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes cards-animation1-r {
+  100% {
+    transform: translateX(-80px);
+  }
+}
+
+@keyframes cards-animation2-r {
+  100% {
+    transform: translateX(-60px);
+  }
+}
+
+@keyframes cards-animation3-r {
+  100% {
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes cards-animation6-r {
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes cards-m-animation1-r {
+  100% {
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes cards-m-animation2-r {
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes cards-m-animation3-r {
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes cards-m-animation6-r {
+  100% {
+    transform: translateX(-60px);
+  }
+}
+
+.js-scroll h1 {
+  opacity: 0;
+  transform: translateX(-33.3%);
+}
+
+.js-scroll.passou h1 {
+  opacity: 1;
+  transition: 0.2s ease;
+  transform: translateX(0);
+}
+
 .logo {
   background-image: url(../img/logos/venda.la-wite.svg);
   background-repeat: no-repeat;
@@ -10226,13 +10339,13 @@ integrados em um só lugar */
   border-radius: 0.25rem;
   display: flex;
   align-items: center;
+  background-color: #fff;
 }
 
 .cards-markt li span {
   width: 50px;
   height: 40px;
   display: inline-block;
-  background-image: url(../img/icon-integracoes/amazon.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -10240,7 +10353,7 @@ integrados em um só lugar */
 
 .cards-markt li p {
   color: #7b7b7b;
-  padding: 0 70px 0px 0px;
+  padding: 0 10px 0px 0px;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
 }
@@ -10257,23 +10370,155 @@ integrados em um só lugar */
 
 .mobile .cards-markt li p {
   display: none;
+  padding: 0;
 }
 
 .mobile .grid-container {
-  grid-template-columns: 60px auto 60px;
+  grid-template-columns: 80px auto 80px;
 }
 
-.c-1 {
-  animation-name: cards-animation;
-  animation-fill-mode: both;
-  animation-duration: 1s;
-  animation-delay: 1s;
+.anima-cards .c-1 {
+  animation: cards-animation1 1s both;
 }
 
-@keyframes cards-animation {
-  100% {
-    transform: translateX(100px);
-  }
+.anima-cards .c-2 {
+  animation: cards-animation2 1s both;
+}
+
+.anima-cards .c-3 {
+  animation: cards-animation3 1s both;
+}
+
+.anima-cards .c-4 {
+  animation: cards-animation2 1s both;
+}
+
+.anima-cards .c-5 {
+  animation: cards-animation1 1s both;
+}
+
+.anima-cards .c-6 {
+  animation: cards-animation6 1s both;
+}
+
+.mobile .anima-cards .c-1 {
+  animation: cards-m-animation1 1s both;
+}
+
+.mobile .anima-cards .c-2 {
+  animation: cards-m-animation2 1s both;
+}
+
+.mobile .anima-cards .c-3 {
+  animation: cards-m-animation3 1s both;
+}
+
+.mobile .anima-cards .c-4 {
+  animation: cards-m-animation2 1s both;
+}
+
+.mobile .anima-cards .c-5 {
+  animation: cards-m-animation1 1s both;
+}
+
+.mobile .anima-cards .c-6 {
+  animation: cards-m-animation6 1s both;
+}
+
+.anima-cards .c-7 {
+  animation: cards-animation1-r 1s both;
+}
+
+.anima-cards .c-8 {
+  animation: cards-animation2-r 1s both;
+}
+
+.anima-cards .c-9 {
+  animation: cards-animation3-r 1s both;
+}
+
+.anima-cards .c-10 {
+  animation: cards-animation2-r 1s both;
+}
+
+.anima-cards .c-11 {
+  animation: cards-animation1-r 1s both;
+}
+
+.anima-cards .c-12 {
+  animation: cards-animation6-r 1s both;
+}
+
+.mobile .anima-cards .c-7 {
+  animation: cards-m-animation1-r 1s both;
+}
+
+.mobile .anima-cards .c-8 {
+  animation: cards-m-animation2-r 1s both;
+}
+
+.mobile .anima-cards .c-9 {
+  animation: cards-m-animation3-r 1s both;
+}
+
+.mobile .anima-cards .c-10 {
+  animation: cards-m-animation2-r 1s both;
+}
+
+.mobile .anima-cards .c-11 {
+  animation: cards-m-animation1-r 1s both;
+}
+
+.mobile .anima-cards .c-12 {
+  animation: cards-m-animation6-r 1s both;
+}
+
+.c-1 span {
+  background-image: url(../img/icon-integracoes/mercado-livre.png);
+}
+
+.c-2 span {
+  background-image: url(../img/icon-integracoes/americanas.png);
+}
+
+.c-3 span {
+  background-image: url(../img/icon-integracoes/submarino.png);
+}
+
+.c-4 span {
+  background-image: url(../img/icon-integracoes/shoptime.png);
+}
+
+.c-5 span {
+  background-image: url(../img/icon-integracoes/magalu.png);
+}
+
+.c-6 span {
+  background-image: url(../img/icon-integracoes/shopee.png);
+}
+
+.c-7 span {
+  background-image: url(../img/icon-integracoes/amazon.png);
+}
+
+.c-8 span {
+  background-image: url(../img/icon-integracoes/extra.png);
+}
+
+.c-9 span {
+  background-image: url(../img/icon-integracoes/ponto-frio.png);
+}
+
+.c-10 span {
+  background-image: url(../img/icon-integracoes/casas-bahia.png);
+}
+
+.c-11 span {
+  background-image: url(../img/icon-integracoes/madeira-madeira.png);
+}
+
+.c-12 span {
+  background-image: url(../img/icon-integracoes/olist.png);
 }
 
 body {
@@ -10286,6 +10531,10 @@ body {
   padding-right: 25px;
   padding-left: 25px;
   position: relative;
+}
+
+::selection {
+  background: #71a1ff;
 }
 
 .btn-whats {

@@ -54,5 +54,29 @@ function menuPreenchido() {
 }
 menuPreenchido();
 
+//animação ao scrool titulos
+const sections = document.querySelectorAll(".js-scroll");
+function animaScroll() {
+  sections.forEach((section) => {
+    const sectionTop = section.getBoundingClientRect().top;
+    if (sectionTop < 320) {
+      section.classList.add("passou");
+    }
+  });
+}
+
+//animação cards
+const containerCards = document.querySelector(".secao-1");
+
+function animaCards() {
+  const cardsTop = containerCards.getBoundingClientRect().top;
+  console.log(cardsTop);
+  if (cardsTop < 100) {
+    containerCards.classList.add("anima-cards");
+  }
+}
+
 window.addEventListener("resize", resize);
 window.addEventListener("scroll", menuPreenchido);
+window.addEventListener("scroll", animaScroll);
+window.addEventListener("scroll", animaCards);
