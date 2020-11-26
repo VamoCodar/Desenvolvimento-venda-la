@@ -35,10 +35,13 @@
 
 .intro {
   position: relative;
+  //titulo
+
   h1 {
     font-family: $poppins;
     margin-bottom: 20px;
     font-weight: 500;
+    font-size: 40px;
     @include d(m) {
       text-align: center;
     }
@@ -46,6 +49,7 @@
       font-size: 32px;
     }
   }
+  //texto principal
   p {
     margin-bottom: 20px;
     color: $white;
@@ -55,6 +59,7 @@
       text-align: center;
     }
   }
+  //botao
   .btn-degrade {
     @include botao(16px);
     padding: 12px 15px;
@@ -63,8 +68,6 @@
     }
   }
 }
-
-//cta
 
 //robo
 
@@ -98,7 +101,9 @@
   }
 }
 //animaçao desktop
-//cards individuais
+
+//            cards individuais
+
 .container-robo {
   @include d(l) {
     .card1 {

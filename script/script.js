@@ -39,6 +39,7 @@ function ativaMenu() {
     }, 300);
   }
 }
+
 //preenchimento do menu ao rolar o scrool
 function menuPreenchido() {
   const menuFixo = document.querySelectorAll(".fixed-top");
@@ -54,7 +55,7 @@ function menuPreenchido() {
 }
 menuPreenchido();
 
-//animação ao scrool titulos
+//animação ao scrool TITULOS
 const sections = document.querySelectorAll(".js-scroll");
 function animaScroll() {
   sections.forEach((section) => {
@@ -144,6 +145,7 @@ $(".cards-depoimentos").slick({
   ],
 });
 
+//eventos pililimpimpim
 window.addEventListener("resize", resize);
 window.addEventListener("scroll", menuPreenchido);
 window.addEventListener("scroll", animaScroll);

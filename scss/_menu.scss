@@ -71,6 +71,19 @@ a.dropdown-item {
   @include degrade-bg;
 }
 
+//estilo botão
+.btn-whats {
+  @include botao(16px);
+}
+.btn-whats:before {
+  content: "";
+  background-image: url(../img/icon/whats.svg);
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
 //MENU MOBILE CHECAGEM
 // DESKTOP
 .navbar-desktop {
@@ -115,7 +128,7 @@ a.dropdown-item {
   cursor: pointer;
   position: relative;
 }
-
+//dois traços
 .hamburguer:after,
 .hamburguer:before {
   content: "";
@@ -165,7 +178,7 @@ a.dropdown-item {
   background-image: url(../img/logos/venda.la-color.svg);
 }
 
-//links do menu aberto
+//links do menu mobile aberto
 .bg-menu-mobile {
   background-color: rgb(255, 255, 255);
   position: absolute;

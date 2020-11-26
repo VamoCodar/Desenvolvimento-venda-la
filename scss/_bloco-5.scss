@@ -1,0 +1,116 @@
+//muitos includes separados nessa seção, prestar atenção
+.bloco-5 {
+  margin-top: 150px;
+  padding: 100px 0;
+  margin-bottom: 150px;
+  @include degrade-bg3;
+  h1 {
+    max-width: 480px;
+    @include titulo(34px);
+  }
+  h4 {
+    margin-top: 15px;
+  }
+  a {
+    @include botao(16px);
+    padding: 15px 40px;
+    margin-top: 30px;
+    display: inline-block;
+    max-width: 250px;
+    text-align: center;
+  }
+}
+.video-2 {
+  max-width: 400px;
+  @include d(m) {
+    margin: 0 auto;
+  }
+}
+.textos-a {
+  display: flex;
+  flex-direction: column;
+}
+//underline
+.bloco-5 h1 {
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    height: 5px;
+    background: $white;
+    left: 0px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+}
+.passou.bloco-5 h1 {
+  &::after {
+    width: 100%;
+    transition-delay: 1s;
+  }
+}
+//colunas no medio
+.row-b5 {
+  @include d(m) {
+    flex-direction: column;
+    justify-content: center;
+    .video2-container {
+      margin: 0 auto;
+      align-self: center;
+      margin-top: 40px;
+      .video2 {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+//organização dos textos medio
+.textos-a {
+  @include d(m) {
+    text-align: center;
+    h1 {
+      margin: 0 auto;
+      order: -4;
+    }
+    h4 {
+      order: -3;
+    }
+    a {
+      margin: 0 auto;
+      display: none;
+    }
+  }
+}
+
+//@media necessario para ajustar o efeito de underline
+@media (max-width: 1201px) {
+  .bloco-5 {
+    h1 {
+      font-size: 28px;
+      max-width: 400px;
+    }
+    h4 {
+      font-size: 22px;
+    }
+  }
+}
+//underline mobile
+@media (max-width: 445px) {
+  .bloco-5 {
+    h1 {
+      font-size: 28px;
+      max-width: 235px;
+    }
+  }
+}
+
+#btn-a-mobile {
+  display: none;
+  @include d(m) {
+    display: block;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,78 @@
+.bloco-4 {
+  //titulos
+  h1 {
+    @include titulo(40px);
+    margin-top: 100px;
+  }
+  h4 {
+    max-width: 690px;
+    color: $preto-claro;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 30px auto;
+    @include d(s) {
+      font-size: 16px;
+    }
+  }
+}
+
+.bloco-4 {
+  li {
+    span {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      margin-bottom: -30px;
+      margin-top: 50px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    h5 {
+      font-size: 20px;
+      font-family: $poppins;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      color: $preto-claro;
+      text-align: center;
+      @include d(s) {
+        max-width: 330px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+.titulo-ic {
+  flex-direction: column;
+}
+
+.icon-r-1 {
+  background-image: url(../img/icon/centralize.svg);
+}
+.icon-r-2 {
+  background-image: url(../img/icon/controle.svg);
+}
+.icon-r-3 {
+  background-image: url(../img/icon/nfe.svg);
+}
+.icon-r-4 {
+  background-image: url(../img/icon/impressao.svg);
+}
+.icon-r-5 {
+  background-image: url(../img/icon/expedicao.svg);
+}
+
+.icon-r-6 {
+  background-image: url(../img/icon/anuncio.svg);
+}
+
+.passou.bloco-4 {
+  li span {
+    //animação
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
+      1s;
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 1s;
+  }
+}

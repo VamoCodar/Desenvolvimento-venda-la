@@ -1,8 +1,11 @@
 .bloco-3 {
   @include degrade-bg2;
-  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 10%, 100% 0, 100% 93%, 0 100%);
   padding-top: 160px;
   margin-top: 90px;
+  @include d(s) {
+    clip-path: polygon(0 6%, 100% 0, 100% 96%, 0 100%);
+  }
   h1 {
     font-family: $poppins;
     margin-bottom: 20px;
@@ -81,7 +84,7 @@
 
 //DEPOIMENTOS
 .depoimentos {
-  padding-bottom: 200px;
+  padding-bottom: 150px;
   h3 {
     @include d(s) {
       font-size: 24px;
@@ -98,7 +101,7 @@
   font-family: $poppins;
   border-radius: $border-radius;
   margin: 0px 30px;
-  max-height: 250px;
+  max-height: 270px;
   @include d(s) {
     margin: 0px;
   }
@@ -133,8 +136,8 @@
   border: transparent;
   height: 50px;
   width: 50px;
-
   border-radius: 50%;
+  padding: 15px;
   background: white;
   box-shadow: $box-shadow;
   margin-left: 10px;
@@ -143,7 +146,9 @@
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
+//botots
 .slick-prev {
   border: transparent;
   width: 50px;
@@ -158,4 +163,5 @@
   background-repeat: no-repeat;
   background-position: center;
   white-space: pre-wrap;
+  cursor: pointer;
 }
