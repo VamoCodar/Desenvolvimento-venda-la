@@ -179,13 +179,13 @@
 }
 
 //animação mobile
-/* .container-robo {
-  @include d(s) {
+.container-robo {
+  @include d(m) {
     .cards {
-      background-image: url(../img/cards-intro/extra.svg);
+      background-image: url(../img/cards-intro/mobile/americanas.png);
       background-repeat: no-repeat;
       background-size: contain;
-      width: 35px;
+      width: 45px;
       height: 100%;
       display: block;
       position: absolute;
@@ -195,13 +195,51 @@
       margin: 0 auto;
       animation: pula-pula 1.2s both ease-in-out 1s,
         pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.2s;
+      @include d(s) {
+        width: 40px;
+      }
     }
     .card1 {
-      background-image: url(../img/cards-intro/amazon.svg);
+      background-image: url(../img/cards-intro/mobile/amazon.png);
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2.3s infinite alternate-reverse ease-in-out 2.2s;
+      top: 17%;
+      right: 130px;
+    }
+    .card2 {
+      background-image: url(../img/cards-intro/mobile/bahia.png);
       animation: pula-pula 1.2s both ease-in-out 1s,
         pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
-      top: 21%;
-      right: 60px;
+      top: 7%;
+      right: -75px;
+    }
+    .card3 {
+      background-image: url(../img/cards-intro/mobile/mercado.png);
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2.1s infinite alternate-reverse ease-in-out 2.2s;
+      top: 32%;
+      right: -115px;
+    }
+    .card4 {
+      background-image: url(../img/cards-intro/mobile/submarino.png);
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
+      top: 42%;
+      right: 120px;
+    }
+    .card5 {
+      background-image: url(../img/cards-intro/mobile/ponto.png);
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2.4s infinite alternate-reverse ease-in-out 2.2s;
+      top: 52%;
+      right: -150px;
+    }
+    .card6 {
+      background-image: url(../img/cards-intro/mobile/magalu.png);
+      animation: pula-pula 1.2s both ease-in-out 1s,
+        pula-pula2 2.4s infinite alternate-reverse ease-in-out 2.2s;
+      top: 17%;
+      right: -190px;
     }
   }
-} */
+}

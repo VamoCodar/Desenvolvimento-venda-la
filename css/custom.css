@@ -9893,32 +9893,68 @@ a.dropdown-item {
   }
 }
 
-/* .container-robo {
-  @include d(s) {
-    .cards {
-      background-image: url(../img/cards-intro/extra.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 35px;
-      height: 100%;
-      display: block;
-      position: absolute;
-      top: 20%;
-      right: 0;
-      left: 0;
-      margin: 0 auto;
-      animation: pula-pula 1.2s both ease-in-out 1s,
-        pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.2s;
-    }
-    .card1 {
-      background-image: url(../img/cards-intro/amazon.svg);
-      animation: pula-pula 1.2s both ease-in-out 1s,
-        pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
-      top: 21%;
-      right: 60px;
-    }
+@media screen and (max-width: 992px) {
+  .container-robo .cards {
+    background-image: url(../img/cards-intro/mobile/americanas.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 45px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.2s;
   }
-} */
+}
+
+@media screen and (max-width: 992px) and (max-width: 539px) {
+  .container-robo .cards {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container-robo .card1 {
+    background-image: url(../img/cards-intro/mobile/amazon.png);
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2.3s infinite alternate-reverse ease-in-out 2.2s;
+    top: 17%;
+    right: 130px;
+  }
+  .container-robo .card2 {
+    background-image: url(../img/cards-intro/mobile/bahia.png);
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
+    top: 7%;
+    right: -75px;
+  }
+  .container-robo .card3 {
+    background-image: url(../img/cards-intro/mobile/mercado.png);
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2.1s infinite alternate-reverse ease-in-out 2.2s;
+    top: 32%;
+    right: -115px;
+  }
+  .container-robo .card4 {
+    background-image: url(../img/cards-intro/mobile/submarino.png);
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
+    top: 42%;
+    right: 120px;
+  }
+  .container-robo .card5 {
+    background-image: url(../img/cards-intro/mobile/ponto.png);
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2.4s infinite alternate-reverse ease-in-out 2.2s;
+    top: 52%;
+    right: -150px;
+  }
+  .container-robo .card6 {
+    background-image: url(../img/cards-intro/mobile/magalu.png);
+    animation: pula-pula 1.2s both ease-in-out 1s, pula-pula2 2.4s infinite alternate-reverse ease-in-out 2.2s;
+    top: 17%;
+    right: -190px;
+  }
+}
+
 /* Os maiores marketplaces
 integrados em um só lugar */
 .bloco-2 h1 {
