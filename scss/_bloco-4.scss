@@ -12,6 +12,7 @@
     margin: 30px auto;
     @include d(s) {
       font-size: 16px;
+      padding: 0 10px;
     }
   }
 }
@@ -32,6 +33,10 @@
       font-family: $poppins;
       font-weight: 700;
       margin-bottom: 10px;
+      @include d(s) {
+        font-size: 18px;
+        text-align: center;
+      }
     }
     p {
       font-size: 16px;
@@ -68,11 +73,11 @@
   background-image: url(../img/icon/anuncio.svg);
 }
 
-.passou.bloco-4 {
-  li span {
-    //animação
+.bloco-4 div.passou {
+  //animação
+  span {
     -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
-      1s;
-    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 1s;
+      0.3s;
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 0.3s;
   }
 }

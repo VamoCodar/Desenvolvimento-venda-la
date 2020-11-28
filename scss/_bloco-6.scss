@@ -1,0 +1,239 @@
+//estrutura das bolinhas e texto foi feito com grid layout
+//separei bastante o codigo para ficar legivel
+// se ligar nos i que tem muito estilo neles
+
+.bloco-6 {
+  margin-bottom: 120px;
+  h1 {
+    @include titulo;
+  }
+  p {
+    @include subtitulo-center;
+  }
+
+  img {
+    width: 300px;
+    @include d(m) {
+      display: none;
+    }
+  }
+}
+.grid-container-6 {
+  max-width: 700px;
+  span {
+    height: 80px;
+    width: 100%;
+    display: block;
+  }
+}
+.grid-container-6 div {
+  display: grid;
+  grid-template-areas:
+    "icone titulo"
+    "icone subtitulo";
+  @include d(s) {
+    grid-template-areas:
+      "icone "
+      " titulo"
+      " subtitulo";
+  }
+  text-align: center;
+  h5 {
+    opacity: 0;
+    grid-area: titulo;
+    @include titulo(22px);
+    @include d(s) {
+      font-size: 20px;
+    }
+  }
+
+  //estilos gerais icon
+
+  i {
+    grid-area: icone;
+    width: 85px;
+    height: 85px;
+    display: block;
+    background: $white;
+    margin: auto 15px;
+    border-radius: 50%;
+    box-shadow: $box-shadow;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    opacity: 0%;
+    @include d(s) {
+      margin: 0 auto;
+      margin-bottom: -10px;
+    }
+
+    @include d(s) {
+      width: 70px;
+      height: 70px;
+      background-size: 40px;
+    }
+  }
+  p {
+    opacity: 0;
+    grid-area: subtitulo;
+    max-width: 400px;
+    @include d(s) {
+      font-size: 16px;
+    }
+  }
+  i:hover {
+    transform: scale(1.1) !important;
+  }
+}
+
+//animações dos titulos e icones da scala e shadow
+.grid-container-6 div.passou {
+  h5,
+  p {
+    transition: ease 0.3s;
+    opacity: 1;
+  }
+
+  i {
+    animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both,
+      shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    opacity: 1;
+
+    transition: opacity ease 0.3s;
+    animation-delay: 0.5s;
+  }
+}
+
+#item-2-5 {
+  grid-template-areas:
+    "titulo icone"
+    "subtitulo icone";
+  @include d(s) {
+    grid-template-areas:
+      "icone "
+      " titulo"
+      " subtitulo";
+  }
+}
+
+#item-4-5 {
+  grid-template-areas:
+    "titulo icone"
+    "subtitulo icone";
+  @include d(s) {
+    grid-template-areas:
+      "icone "
+      " titulo"
+      " subtitulo";
+  }
+}
+
+//animação das bolinhas com background ><
+#item-1-5.passou {
+  margin-top: 10px;
+  i {
+    animation: bgg 0.5s ease-in-out both 1s;
+    background-image: url(../img/circulos/especialista.svg);
+  }
+}
+
+#item-2-5.passou {
+  i {
+    background-image: url(../img/circulos/implantacao.svg);
+
+    animation: bgg2 0.5s ease-in-out both 1.5s;
+  }
+}
+
+#item-3-5.passou {
+  i {
+    background-image: url(../img/circulos/suporte.svg);
+    animation: bgg 0.5s ease-in-out both 1.2s;
+  }
+}
+#item-4-5.passou {
+  margin-top: -10px;
+  i {
+    background-image: url(../img/circulos/acompanhamento.svg);
+    animation: bgg2 0.5s ease-in-out both 1s;
+  }
+}
+
+//centraliza a bixa
+.containr-img-5 {
+  margin: auto 0;
+}
+
+//linhas estilos gerais
+
+.linha-1 {
+  background-image: url(../img/circulos/traco-1.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  clip-path: inset(0 0 100% 0);
+  margin-bottom: -15px;
+}
+.linha-2 {
+  background-image: url(../img/circulos/traco-3.svg);
+  background-repeat: no-repeat;
+  max-width: 510px;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  clip-path: inset(0 0 100% 0);
+}
+.linha-3 {
+  background-image: url(../img/circulos/traco-2.svg);
+  background-repeat: no-repeat;
+  max-width: 510px;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  clip-path: inset(0 0 100% 0);
+  margin-top: -20px;
+}
+
+//ativação  da animação da linha quando scrola
+
+.linha-1.passou {
+  animation: linha 1s cubic-bezier(0.645, 0.045, 0.355, 1) both 1s;
+}
+.linha-2.passou {
+  animation: linha2 1s cubic-bezier(0.645, 0.045, 0.355, 1) both 1.2s;
+  background-size: 400px;
+}
+.linha-3.passou {
+  animation: linha 1s cubic-bezier(0.645, 0.045, 0.355, 1) both 1.2s;
+  background-size: 400px;
+}
+
+// troca as linhas no mobile
+.linha-1.passou,
+.linha-2.passou,
+.linha-3.passou {
+  @include d(s) {
+    background-image: url(../img/circulos/traco-4-mobile.svg);
+    margin: 20px auto;
+    background-size: contain;
+    animation: linha-mobile 1s cubic-bezier(0.645, 0.045, 0.355, 1) both 1s;
+  }
+}
+
+// centralizar o boco no mobile e dividir no desktop
+.flex-bloco {
+  justify-content: space-around;
+  @include d(s) {
+    justify-content: center;
+  }
+}
+
+//ajustes dos item
+#item-3-5 {
+  margin-top: -30px;
+  @include d(s) {
+    margin-top: initial;
+  }
+}

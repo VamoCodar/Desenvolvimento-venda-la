@@ -28,7 +28,6 @@ function resize() {
 function ativaMenu() {
   const menuMobile = document.querySelector(".menu-mobile");
   const linksMenu = document.querySelector(".bg-menu-mobile");
-
   if (!menuMobile.classList.contains("menu-open")) {
     menuMobile.classList.add("menu-open");
   } else if (menuMobile.classList.contains("menu-open")) {
@@ -66,9 +65,8 @@ function animaScroll() {
   });
 }
 
-//animação cards
+//animação cards do bloco-2
 const containerCards = document.querySelector(".bloco-2");
-
 function animaCards() {
   const cardsTop = containerCards.getBoundingClientRect().top;
   console.log(cardsTop);
@@ -145,7 +143,7 @@ $(".cards-depoimentos").slick({
   ],
 });
 
-//eventos pililimpimpim
+//eventos pilimpimpim
 window.addEventListener("resize", resize);
 window.addEventListener("scroll", menuPreenchido);
 window.addEventListener("scroll", animaScroll);

@@ -32,7 +32,6 @@
 }
 
 //intro texto
-
 .intro {
   position: relative;
   //titulo
@@ -42,6 +41,7 @@
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 40px;
+    overflow: hidden;
     @include d(m) {
       text-align: center;
     }
@@ -107,6 +107,8 @@
 .container-robo {
   @include d(l) {
     .card1 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/amazon.svg);
       right: 400px;
       animation: pula-pula 1.2s both ease-in-out 1s,
@@ -114,6 +116,8 @@
       top: 80px;
     }
     .card2 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/extra.svg);
       right: 230px;
       animation: pula-pula 1.2s both ease-in-out 1s,
@@ -121,6 +125,8 @@
       top: 180px;
     }
     .card3 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/americanas.svg);
       right: 450px;
       animation: pula-pula 1.2s both ease-in-out 1s,
@@ -128,6 +134,8 @@
       top: 160px;
     }
     .card4 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/madeiramadeira.svg);
       right: 500px;
       animation: pula-pula 1.2s both ease-in-out 1s,
@@ -135,6 +143,8 @@
       top: 100px;
     }
     .card5 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/magalu.svg);
       right: 515px;
       animation: pula-pula 1.2s both ease-in-out 1s,
@@ -142,6 +152,8 @@
       top: 180px;
     }
     .card6 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/mercado-livre.svg);
       right: 280px;
       animation: pula-pula 1.2s both ease-in-out 1s,
@@ -149,6 +161,8 @@
       top: 240px;
     }
     .card7 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/ponto-frio.svg);
       right: 200px;
       animation: pula-pula 1.2s both ease-in-out 1s,
@@ -156,6 +170,8 @@
       top: 270px;
     }
     .card8 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/submarino.svg);
       right: 460px;
       animation: pula-pula 1.2s both ease-in-out 1s,
@@ -163,6 +179,8 @@
       top: 30px;
     }
     .card10 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/casas-bahia.svg);
       right: 200px;
       animation: pula-pula 1.2s both ease-in-out 1s,
@@ -182,6 +200,8 @@
 .container-robo {
   @include d(m) {
     .cards {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/mobile/americanas.png);
       background-repeat: no-repeat;
       background-size: contain;
@@ -200,6 +220,8 @@
       }
     }
     .card1 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/mobile/amazon.png);
       animation: pula-pula 1.2s both ease-in-out 1s,
         pula-pula2 2.3s infinite alternate-reverse ease-in-out 2.2s;
@@ -207,6 +229,8 @@
       right: 130px;
     }
     .card2 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/mobile/bahia.png);
       animation: pula-pula 1.2s both ease-in-out 1s,
         pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
@@ -214,6 +238,8 @@
       right: -75px;
     }
     .card3 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/mobile/mercado.png);
       animation: pula-pula 1.2s both ease-in-out 1s,
         pula-pula2 2.1s infinite alternate-reverse ease-in-out 2.2s;
@@ -221,6 +247,8 @@
       right: -115px;
     }
     .card4 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/mobile/submarino.png);
       animation: pula-pula 1.2s both ease-in-out 1s,
         pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
@@ -228,6 +256,8 @@
       right: 120px;
     }
     .card5 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/mobile/ponto.png);
       animation: pula-pula 1.2s both ease-in-out 1s,
         pula-pula2 2.4s infinite alternate-reverse ease-in-out 2.2s;
@@ -235,6 +265,8 @@
       right: -150px;
     }
     .card6 {
+      will-change: opacity;
+      will-change: transform;
       background-image: url(../img/cards-intro/mobile/magalu.png);
       animation: pula-pula 1.2s both ease-in-out 1s,
         pula-pula2 2.4s infinite alternate-reverse ease-in-out 2.2s;
