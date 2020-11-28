@@ -222,7 +222,7 @@
 // centralizar o boco no mobile e dividir no desktop
 .flex-bloco {
   justify-content: space-around;
-  @include d(s) {
+  @include d(m) {
     justify-content: center;
   }
 }

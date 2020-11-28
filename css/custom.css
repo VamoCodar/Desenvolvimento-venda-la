@@ -8136,7 +8136,7 @@ integrados em um só lugar */
   justify-content: space-around;
 }
 
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 992px) {
   .flex-bloco {
     justify-content: center;
   }
