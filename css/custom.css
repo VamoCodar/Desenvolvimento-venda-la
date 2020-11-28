@@ -6123,6 +6123,38 @@ img {
   max-width: 100%;
 }
 
+fieldset {
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: none;
+  border-color: transparent;
+  border-image: initial;
+}
+
+.input {
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: none;
+  background-color: none;
+  -webkit-rtl-ordering: logical;
+  margin: 0em;
+  font: 400 13.3333px "Rubik", sans-serif;
+  padding: initial;
+  border-width: 0px;
+  border-style: inset;
+  border-color: white;
+  border-image: initial;
+}
+
 :focus {
   outline: 0px transparent !important;
 }
@@ -6204,6 +6236,11 @@ ss: 370px;
 .ativoScrool .navbar-top ul li a {
   color: #000;
   text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.ativoScrool .navbar-top ul li a:hover {
+  color: #8089ff;
 }
 
 .dropdown-toggle {
@@ -7851,7 +7888,7 @@ integrados em um só lugar */
 }
 
 .bloco-6 {
-  margin-bottom: 120px;
+  margin-bottom: 160px;
 }
 
 .bloco-6 h1 {
@@ -7971,10 +8008,6 @@ integrados em um só lugar */
   .grid-container-6 div p {
     font-size: 16px;
   }
-}
-
-.grid-container-6 div i:hover {
-  transform: scale(1.1) !important;
 }
 
 .grid-container-6 div.passou h5,
@@ -8119,10 +8152,258 @@ integrados em um só lugar */
   }
 }
 
+.formulario {
+  background: transparent linear-gradient(64deg, #7d8dff 0%, #56cbff 100%) 0% 0% no-repeat padding-box;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+@media screen and (max-width: 992px) {
+  .dados {
+    order: 2;
+  }
+}
+
+.dados h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 539px) {
+  .dados h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.dados h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 539px) {
+  .dados h2 {
+    font-size: 18px;
+  }
+}
+
+.dados h3 {
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.dados p {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.form-container {
+  font-family: "Poppins", sans-serif;
+}
+
+.form-container h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 992px) {
+  .form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.form-container input {
+  background: #fff;
+  border: 2px solid transparent;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: border 0.3s ease;
+}
+
+.form-container input:focus {
+  border: 2px solid #3c7bf9;
+}
+
+.form-container input::placeholder {
+  color: rgba(0, 0, 0, 0.379);
+}
+
+.form-container .campo {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 539px) {
+  .form-container .campo {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 539px) and (max-width: 539px) {
+  .form-container .campo {
+    margin-bottom: 10px;
+  }
+}
+
+.form-container .campo label {
+  color: #fff;
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-container button.enviar {
+  background: transparent linear-gradient(270deg, #92d275 0%, #19d9b4e6 100%) 0% 0% no-repeat padding-box;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin-left: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.form-container button.enviar:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.06);
+}
+
+@media screen and (max-width: 992px) {
+  .form-container button.enviar {
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+
+.form-container .dropdown-toggle {
+  border: none;
+  background: white;
+  border-radius: 8px;
+  color: rgba(0, 0, 0, 0.379);
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.form-container .dropdown-menu {
+  width: 94%;
+  text-align: center;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+@media screen and (max-width: 539px) {
+  .form-container .dropdown-menu .dropdown-item {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  fieldset {
+    min-inline-size: 250px;
+    padding-inline-start: 0;
+    padding-block-start: 0;
+  }
+}
+
+footer {
+  background: #fafafa;
+  padding: 40px 0;
+}
+
+footer h2 {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  footer h2 {
+    text-align: center;
+  }
+}
+
+footer img {
+  margin-bottom: 20px;
+}
+
+.sobre-nos li {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .sobre-nos {
+    order: -2;
+    margin-bottom: 30px;
+  }
+}
+
+.mais-infos li {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .mais-infos {
+    order: -1;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .app-mercado li a img {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .acelerada li a img {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .investida li a img {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sociais a {
+    width: 50px;
+    margin: 0 auto;
+  }
+}
+
+footer li a:hover {
+  color: #71a1ff;
+}
+
+.direito {
+  border-top: 1px #7b7b7b solid;
+  padding-top: 40px;
+}
+
+.direito p {
+  text-align: center;
+}
+
+.direito a {
+  color: #71a1ff;
+}
+
 body {
   font-family: "Rubik", sans-serif;
-  height: 6000px;
-  transition: 0.3s ease;
   overflow-x: hidden;
 }
 

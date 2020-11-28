@@ -75,6 +75,21 @@ function animaCards() {
   }
 }
 
+//função pra adiconar o value do dropdown
+function dropdownValue(event) {
+  event.preventDefault();
+  var botoes = document
+    .querySelectorAll(".dropdown-menu button")
+    .forEach((button) => {
+      button.classList.remove("active");
+    });
+  const button = event.currentTarget;
+  button.classList.add("active");
+  const input = document.querySelector('[name="experiencia"]');
+  input.value = button.dataset.value;
+  console.log(button);
+}
+
 //carrousel slick
 $(".cards-depoimentos").slick({
   centerMode: true,

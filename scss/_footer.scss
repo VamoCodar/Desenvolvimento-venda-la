@@ -1,0 +1,82 @@
+footer {
+  background: $footer-color;
+  padding: 40px 0;
+  //titulos
+  h2 {
+    font-size: 18px;
+    font-family: $poppins;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @include d(m) {
+      text-align: center;
+    }
+  }
+  img {
+    margin-bottom: 20px;
+  }
+}
+
+.sobre-nos {
+  li {
+    margin-bottom: 10px;
+  }
+  @include d(m) {
+    order: -2;
+    margin-bottom: 30px;
+  }
+}
+.mais-infos {
+  li {
+    margin-bottom: 10px;
+  }
+  @include d(m) {
+    order: -1;
+    margin-bottom: 30px;
+  }
+}
+
+.app-mercado {
+  li a img {
+    @include d(m) {
+      margin: 20px auto;
+    }
+  }
+}
+.acelerada {
+  li a img {
+    @include d(m) {
+      margin: 20px auto;
+    }
+  }
+}
+
+.investida {
+  li a img {
+    @include d(m) {
+      margin: 20px auto;
+    }
+  }
+}
+
+.sociais {
+  a {
+    @include d(m) {
+      width: 50px;
+      margin: 0 auto;
+    }
+  }
+}
+footer li a:hover {
+  color: $azul-claro;
+}
+.direito {
+  border-top: 1px $preto-claro solid;
+
+  padding-top: 40px;
+  p {
+    text-align: center;
+  }
+  a {
+    color: $azul-claro;
+  }
+}

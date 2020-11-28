@@ -3,7 +3,7 @@
 // se ligar nos i que tem muito estilo neles
 
 .bloco-6 {
-  margin-bottom: 120px;
+  margin-bottom: 160px;
   h1 {
     @include titulo;
   }
@@ -80,9 +80,6 @@
     @include d(s) {
       font-size: 16px;
     }
-  }
-  i:hover {
-    transform: scale(1.1) !important;
   }
 }
 

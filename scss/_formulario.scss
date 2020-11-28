@@ -1,0 +1,137 @@
+//background e padding basico
+.formulario {
+  @include degrade-bg3;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.dados {
+  @include d(m) {
+    order: 2;
+  }
+  //contato
+  h1 {
+    font-family: $poppins;
+    font-size: 26px;
+    font-weight: 700;
+    @include d(s) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  //telefone
+  h2 {
+    font-family: $poppins;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+    @include d(s) {
+      font-size: 18px;
+    }
+  }
+  //cidades
+  h3 {
+    font-family: $rubik;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  //dados
+  p {
+    font-family: $rubik;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+
+.form-container {
+  //titulo vamos crescer
+
+  font-family: $poppins;
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    @include d(m) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  //input do formulario
+  input {
+    background: $white;
+    border: 2px solid transparent;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+    &:focus {
+      border: 2px solid #3c7bf9;
+    }
+  }
+
+  //texto dentro dos inputs
+  input::placeholder {
+    color: rgba(0, 0, 0, 0.379);
+  }
+
+  //divisão dos campos, as colunas no html mandam como vão posicionar
+  .campo {
+    display: flex;
+    flex-direction: column;
+    @include d(s) {
+      max-width: 100%;
+      @include d(s) {
+        margin-bottom: 10px;
+      }
+    }
+    label {
+      color: $white;
+      margin-bottom: 2px;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+  //botao enviar
+  button.enviar {
+    @include botao(16px);
+    margin-left: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    @include d(m) {
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+//dropdown
+.form-container {
+  .dropdown-toggle {
+    border: none;
+    background: white;
+    border-radius: 8px;
+    color: rgba(0, 0, 0, 0.379);
+    padding: 10px 0;
+    margin-top: 10px;
+  }
+
+  .dropdown-menu {
+    width: 94%;
+    text-align: center;
+    box-shadow: $box-shadow;
+    .dropdown-item {
+      @include d(s) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+//retirar esses stilo padrão regassado do fieldset
+fieldset {
+  @include d(s) {
+    min-inline-size: 250px;
+    padding-inline-start: 0;
+    padding-block-start: 0;
+  }
+}
