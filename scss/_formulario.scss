@@ -139,10 +139,9 @@
       }
     }
   }
-}
-
-.dropdown-toggle::after {
-  display: none;
+  .dropdown-toggle::after {
+    display: none;
+  }
 }
 
 //retirar esses stilo padrão regassado do fieldset
