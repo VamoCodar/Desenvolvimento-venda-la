@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Diminua em mais de 10x o tempo gasto na gestão de pedidos e produtos com o Venda.la. Elimine erros, economize dinheiro e envie seus pedidos mais rápido.">
+    <meta property="" content="Venda.la">
+    <meta name="geo.region" content="BR-SP">
+    <meta name="geo.placename" content="São Paulo">
+    <meta name="geo.position" content="-23.570329;-46.646204">
+    <!-- fonts open sans, rubik, Poppins -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS customizado -->
+    <link rel="stylesheet" href="css/custom-integracoes.css">
+
+
+
+
+    <title>Integrações - Venda.la</title>
+</head>
+
+<body>
+
+
+    <header class="principal row justify-content-center align-items-center">
+        <div class="textos">
+            <h1 class="text-white text-center">Integrações do HUB Marketplace</h1>
+            <p class="text-white text-center mt-2">Centralize sua gestão com as integrações o HUB Marketplace Venda.la possuí.</p>
+        </div>
+    </header>
+
+
+    <div class="waves"><img src="img/waves.svg" alt="ondas-sbg"></div>
+
+
+
+
+    <!-- menu desktop -->
+    <nav class="navbar-top fixed-top navbar-desktop">
+        <div class="container">
+            <div class="row align-items-center justify-content-end">
+                <a class="logo mr-auto" href="index.html" alt="logo-venda.la"></a>
+                <ul class="row col-7">
+                    <li><a href="index.html">Inicio</a></li>
+                    <!-- dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Recursos
+                        </a>
+                        <div class="dropdown-menu shadow-lg" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Gestão de Marketplace</a>
+                            <a class="dropdown-item" href="#">Gestão de E-commerce</a>
+                            <a class="dropdown-item" href="#">Gestão de ERP</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle integracoes-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Integrações
+                        </a>
+                        <div class="dropdown-menu shadow-lg" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Marketplace</a>
+                            <a class="dropdown-item" href="#">Plataformas de E-commerce</a>
+                            <a class="dropdown-item" href="#">Logística</a>
+                            <a class="dropdown-item" href="#">ERP</a>
+
+                        </div>
+                    </li>
+                    <!-- fim  dropdown -->
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contratar</a></li>
+                </ul>
+                <!--  -->
+                <button class="btn-degrade btn-whats ml-md-5">Vamos Conversar</button>
+            </div>
+        </div>
+    </nav>
+    <!-- fim menu desktop -->
+    <!-- inicio menu mobile -->
+    <nav class="menu-mobile fixed-top">
+        <div class="container pt-2">
+            <div class="row align-items-center justify-content-between">
+                <a class="logo logo-mobile " href="index.html" alt="logo-venda.la"></a>
+
+                <div class="apontador" onclick="ativaMenu()">
+                    <i class="hamburguer"></i>
+                </div>
+            </div>
+        </div>
+        <section class="links-menu">
+            <ul class="text-center bg-menu-mobile">
+
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Recursos</a></li>
+                <li><a href="#">Integrações</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contratar</a></li>
+
+            </ul>
+        </section>
+    </nav>
+    <!-- fim do menu mobile -->
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- slick javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+
+
+
+    <!-- js vannila -->
+    <script>
+
+        document.addEventListener("readystatechange", function (event) {
+            if (document.readyState === "complete") {
+                console.log("pronto");
+            }
+        });
+
+        const body = document.querySelector("body");
+
+        //função que adiciona a classe mobile ou desktop dependendo do tamanho da tela
+        function checagem() {
+            const body = document.querySelector("body");
+            if (window.innerWidth >= 1000) {
+                body.classList.add("desktop");
+                body.classList.remove("mobile");
+            } else {
+                body.classList.add("mobile");
+                body.classList.remove("desktop");
+            }
+        }
+        checagem();
+
+        //mesma funçao de checagem só que no resize
+        function resize() {
+            if (window.innerWidth >= 1000) {
+                body.classList.add("desktop");
+                body.classList.remove("mobile");
+            } else {
+                body.classList.add("mobile");
+                body.classList.remove("desktop");
+            }
+        }
+
+        //abre menu mobile
+        function ativaMenu() {
+            const menuMobile = document.querySelector(".menu-mobile");
+            const linksMenu = document.querySelector(".bg-menu-mobile");
+            if (!menuMobile.classList.contains("menu-open")) {
+                menuMobile.classList.add("menu-open");
+            } else if (menuMobile.classList.contains("menu-open")) {
+                linksMenu.setAttribute("style", "animation: sobeMenu 300ms both ease-out;");
+                setTimeout(() => {
+                    menuMobile.classList.remove("menu-open");
+                    linksMenu.removeAttribute("style", "animation");
+                }, 300);
+            }
+        }
+
+        //preenchimento do menu ao rolar o scrool
+        function menuPreenchido() {
+            const menuFixo = document.querySelectorAll(".fixed-top");
+            menuFixo.forEach((i) => {
+                if (window.pageYOffset >= 100) {
+                    body.classList.add("ativoScrool");
+                    i.setAttribute("style", "background-color: white;");
+                } else if (window.pageYOffset < 100) {
+                    i.removeAttribute("style", "background-color");
+                    body.classList.remove("ativoScrool");
+                }
+            });
+        }
+        menuPreenchido();
+
+        //animação ao scrool TITULOS
+        const sections = document.querySelectorAll(".js-scroll");
+        function animaScroll() {
+            sections.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < 380) {
+                    section.classList.add("passou");
+                }
+            });
+        }
+
+
+
+        //função pra adiconar o value do dropdown DO FORMULARIO
+        function dropdownValue(event) {
+            event.preventDefault();
+            var botoes = document
+                .querySelectorAll(".dropdown-menu button")
+                .forEach((button) => {
+                    button.classList.remove("active");
+                });
+            const button = event.currentTarget;
+            button.classList.add("active");
+            const input = document.querySelector('[name="experiencia"]');
+            input.value = button.dataset.value;
+        }
+
+        //eventos pilimpimpim
+        window.addEventListener("resize", resize);
+        window.addEventListener("scroll", menuPreenchido);
+
+
+    </script>
+
+
+</body>
+
+</html>

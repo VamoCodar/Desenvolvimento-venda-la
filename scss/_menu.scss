@@ -31,7 +31,7 @@
   }
 }
 .ativoScrool .navbar-top {
-  transition: 0.4s ease;
+  transition: 0.3s ease;
   padding: 5px 0;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   ul {
@@ -88,9 +88,10 @@ a.dropdown-item {
   vertical-align: middle;
   margin-right: 5px;
 }
+
 //MENU MOBILE CHECAGEM
 // DESKTOP
-.navbar-desktop {
+.mobile .navbar-desktop {
   display: none;
 }
 .desktop .navbar-desktop {
@@ -109,8 +110,6 @@ a.dropdown-item {
 .mobile .menu-open .links-menu {
   display: block;
 }
-//fim menu e dropdown
-
 //estilização icone menu-mobile
 //botao clicavel
 .apontador {
@@ -218,13 +217,13 @@ a.dropdown-item {
 
 .mobile .menu-mobile {
   padding-bottom: 10px;
-  transition: 0.2s ease-in;
 }
 
 //coloca sombra no bg do menu
 .ativoScrool .menu-mobile {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
+//retira a sombra quando do navbar quando abre o menu
 .ativoScrool .menu-open.menu-mobile {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0);
 }

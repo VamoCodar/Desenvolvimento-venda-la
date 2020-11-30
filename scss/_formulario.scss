@@ -45,7 +45,6 @@
 
 .form-container {
   //titulo vamos crescer
-
   font-family: $poppins;
   h1 {
     font-size: 26px;
@@ -106,25 +105,44 @@
 
 //dropdown
 .form-container {
+  .dropdown {
+    &:after {
+      content: "";
+      display: inline-block;
+      background-image: url(../img/icon/seta.svg);
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 9px;
+      position: absolute;
+      top: 40px;
+      right: 25px;
+      opacity: 50%;
+    }
+  }
   .dropdown-toggle {
     border: none;
     background: white;
     border-radius: 8px;
     color: rgba(0, 0, 0, 0.379);
-    padding: 10px 0;
+    padding: 10px;
+    padding-left: 12px;
     margin-top: 10px;
+    text-align: start;
   }
 
   .dropdown-menu {
-    width: 94%;
-    text-align: center;
     box-shadow: $box-shadow;
+    width: 93%;
     .dropdown-item {
       @include d(s) {
         font-size: 12px;
       }
     }
   }
+}
+
+.dropdown-toggle::after {
+  display: none;
 }
 
 //retirar esses stilo padrão regassado do fieldset

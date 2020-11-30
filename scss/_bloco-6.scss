@@ -18,6 +18,7 @@
     }
   }
 }
+//separação img e bloco
 .grid-container-6 {
   max-width: 700px;
   span {
@@ -38,6 +39,8 @@
       " subtitulo";
   }
   text-align: center;
+
+  //titulos das bolinhas
   h5 {
     opacity: 0;
     grid-area: titulo;
@@ -65,9 +68,6 @@
     @include d(s) {
       margin: 0 auto;
       margin-bottom: -10px;
-    }
-
-    @include d(s) {
       width: 70px;
       height: 70px;
       background-size: 40px;
@@ -100,7 +100,7 @@
     animation-delay: 0.5s;
   }
 }
-
+//organização grid dos icones,texto e linha
 #item-2-5 {
   grid-template-areas:
     "titulo icone"
@@ -162,7 +162,6 @@
 }
 
 //linhas estilos gerais
-
 .linha-1 {
   background-image: url(../img/circulos/traco-1.svg);
   background-repeat: no-repeat;
@@ -193,7 +192,7 @@
   margin-top: -20px;
 }
 
-//ativação  da animação da linha quando scrola
+//ativação  da animação das linhas quando scrola
 
 .linha-1.passou {
   animation: linha 1s cubic-bezier(0.645, 0.045, 0.355, 1) both 1s;
@@ -219,7 +218,7 @@
   }
 }
 
-// centralizar o boco no mobile e dividir no desktop
+// centralizar o bloco no mobile e dividir no desktop
 .flex-bloco {
   justify-content: space-around;
   @include d(m) {

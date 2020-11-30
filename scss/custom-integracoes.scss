@@ -1,3 +1,5 @@
+//estilos abaixo dos includes
+
 //mixins
 @mixin degrade {
   //degrade dos botoes
@@ -112,13 +114,6 @@ $footer-color: #fafafa;
 @import "responsivo";
 @import "menu";
 @import "animations";
-//blocos da pagina home
-@import "bloco-1";
-@import "bloco-2";
-@import "bloco-3";
-@import "bloco-4";
-@import "bloco-5";
-@import "bloco-6";
 //deixar gormulario e footer sempre abaixo
 @import "formulario";
 @import "footer";
@@ -130,6 +125,7 @@ $dropdown-border-color: transparent;
 body {
   font-family: $rubik;
   overflow-x: hidden;
+  height: 4000px;
 }
 
 .container {
@@ -140,4 +136,16 @@ body {
 
 ::selection {
   background: #54d39b;
+}
+
+//estilos da pagina integrações
+/* .integracoes-item {
+}
+ */
+.principal {
+  height: 350px;
+  padding-top: 54px;
+  @include degrade-bg;
+  position: relative;
+  max-width: 100%;
 }

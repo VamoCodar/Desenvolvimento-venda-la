@@ -5,16 +5,31 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Diminua em mais de 10x o tempo gasto na gestão de pedidos e produtos com o Venda.la. Elimine erros, economize dinheiro e envie seus pedidos mais rápido.">
+    <meta property="" content="Venda.la">
+    <meta name="geo.region" content="BR-SP">
+    <meta name="geo.placename" content="São Paulo">
+    <meta name="geo.position" content="-23.570329;-46.646204">
+    <!-- FAVICO -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
     <!-- fonts open sans, rubik, Poppins -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;700&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- SLICK CSS CARROUSEL -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
     <!-- Bootstrap CSS customizado -->
     <link rel="stylesheet" href="css/custom.css">
 
 
-    <title>Venda-la</title>
+
+
+    <title>Venda.la</title>
 </head>
 
 <body>
@@ -440,7 +455,7 @@
                                 <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Sua experiência em marketplaces
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuButton">
                                     <input type="hidden" id="experiencia" name="experiencia" value="0" required />
 
                                     <button onclick="dropdownValue(event)" class=" active dropdown-item" data-value="4">Vendo em 2 ou mais marketplaces</button>
@@ -470,6 +485,7 @@
                         <h2>Investida por</h2>
                     </li>
                     <li><a href="#"><img src="img/footer/crescera_invest.png" alt="Crescera"></a></li>
+                    <li><a href="#"><img src="img/footer/criatec2-640x250.png" alt="Criatec"></a></li>
                     <li class="tecnologia">
                         <h2>Tecnologia</h2>
                     </li>
@@ -477,7 +493,7 @@
 
                         <a href="#"><img src="img/footer/aws_logo.png" alt="Aws"></a>
                     </li>
-                    <li><a href="#"><img src="img/footer/criatec2-640x250.png" alt="Criatec"></a></li>
+
                 </ul>
 
                 <ul class="acelerada">
@@ -576,25 +592,8 @@
     <script type="text/javascript" src="script/script.js"></script>
     <script>
 
-        //preload nas imagens
-        var images = new Array();
-        function preload() {
-            images[0] = new Image();
-            images[0].src = "img/logo/venda.la-color.svg";
-            images[1] = new Image();
-            images[1].src = "img/integrados-image.png";
-            images[2] = new Image();
-            images[2].src = "img/logos/venda.la-wite.svg";
-            images[3] = new Image();
-            images[3].src = "img/logos/venda.la-wite.svg";
-            images[4] = new Image();
-            images[4].src = "img/cards-intro/robo.svg";
 
-
-
-        }
-
-        /* script para colocar a imagem em cima do video */
+        /* script para colocar a imagem em cima do video  enquanto carrega*/
         $(function () {
             var videos = $(".video");
 
@@ -611,6 +610,77 @@
                 elm.addClass("player").html(ifr);
                 elm.off("click");
             });
+        });
+
+        //carrousel slick
+        $(".cards-depoimentos").slick({
+            centerMode: true,
+            infinite: true,
+            arrows: true,
+            centerPadding: "0px",
+            slidesToShow: 3,
+            slidesToScroll: 5,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        centerMode: true,
+                        infinite: true,
+                        arrows: true,
+                        centerPadding: "50px",
+                        slidesToShow: 2,
+                        slidesToScroll: 5,
+                    },
+                },
+                {
+                    breakpoint: 993,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: "120px",
+                        slidesToShow: 1,
+                        slidesToScroll: 5,
+                    },
+                },
+
+                {
+                    breakpoint: 768,
+                    settings: {
+                        infinite: false,
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: "70px",
+                        slidesToShow: 1,
+                        slidesToScroll: 5,
+                    },
+                },
+                {
+                    breakpoint: 461,
+                    settings: {
+                        infinite: false,
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: "10px",
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: 1200,
+
+                    },
+                },
+                {
+                    breakpoint: 330,
+                    settings: {
+                        infinite: false,
+                        arrows: false,
+                        centerMode: false,
+                        centerPadding: "0px",
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: 1200,
+                    },
+                },
+            ],
         });
 
 

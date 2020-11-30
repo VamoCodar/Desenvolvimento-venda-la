@@ -42,14 +42,13 @@
     height: 5px;
     background: $white;
     left: 0px;
-    -webkit-transition: 0.4s;
     transition: 0.4s;
   }
 }
 .passou.bloco-5 h1 {
   &::after {
     width: 100%;
-    transition-delay: 1s;
+    transition-delay: 0.7s;
   }
 }
 //colunas no medio
@@ -106,6 +105,7 @@
     }
   }
 }
+//botao mobile, aparece
 
 #btn-a-mobile {
   display: none;

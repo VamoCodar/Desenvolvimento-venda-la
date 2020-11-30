@@ -1,3 +1,9 @@
+document.addEventListener("readystatechange", function (event) {
+  if (document.readyState === "complete") {
+    console.log("pronto");
+  }
+});
+
 const body = document.querySelector("body");
 
 //função que adiciona a classe mobile ou desktop dependendo do tamanho da tela
@@ -69,13 +75,12 @@ function animaScroll() {
 const containerCards = document.querySelector(".bloco-2");
 function animaCards() {
   const cardsTop = containerCards.getBoundingClientRect().top;
-  console.log(cardsTop);
   if (cardsTop < 100) {
     containerCards.classList.add("anima-cards");
   }
 }
 
-//função pra adiconar o value do dropdown
+//função pra adiconar o value do dropdown DO FORMULARIO
 function dropdownValue(event) {
   event.preventDefault();
   var botoes = document
@@ -87,76 +92,7 @@ function dropdownValue(event) {
   button.classList.add("active");
   const input = document.querySelector('[name="experiencia"]');
   input.value = button.dataset.value;
-  console.log(button);
 }
-
-//carrousel slick
-$(".cards-depoimentos").slick({
-  centerMode: true,
-  infinite: true,
-  arrows: true,
-  centerPadding: "0px",
-  slidesToShow: 3,
-  slidesToScroll: 5,
-  responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        centerMode: true,
-        infinite: true,
-        arrows: true,
-        centerPadding: "50px",
-        slidesToShow: 2,
-        slidesToScroll: 5,
-      },
-    },
-    {
-      breakpoint: 993,
-      settings: {
-        centerMode: true,
-        centerPadding: "120px",
-        slidesToShow: 1,
-        slidesToScroll: 5,
-      },
-    },
-
-    {
-      breakpoint: 768,
-      settings: {
-        infinite: false,
-        arrows: false,
-        centerMode: true,
-        centerPadding: "70px",
-        slidesToShow: 1,
-        slidesToScroll: 5,
-      },
-    },
-    {
-      breakpoint: 461,
-      settings: {
-        infinite: false,
-        arrows: false,
-        centerMode: true,
-        centerPadding: "10px",
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 330,
-      settings: {
-        infinite: false,
-        arrows: false,
-        centerMode: false,
-        centerPadding: "0px",
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1200,
-      },
-    },
-  ],
-});
 
 //eventos pilimpimpim
 window.addEventListener("resize", resize);

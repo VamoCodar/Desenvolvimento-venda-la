@@ -7,6 +7,7 @@
     clip-path: polygon(0 6%, 100% 0, 100% 96%, 0 100%);
   }
   h1 {
+    //depoimento
     font-family: $poppins;
     margin-bottom: 20px;
     font-size: 32px;
@@ -19,6 +20,7 @@
     }
   }
   h2 {
+    //rafael mansberg
     font-size: 20px;
     font-family: $poppins;
 
@@ -45,7 +47,7 @@
     margin-left: 0;
   }
 
-  //botao video
+  //botao ado lado do  video
   a {
     text-align: center;
     @include botao(16px);
@@ -60,7 +62,7 @@
     }
   }
 }
-
+//videozin
 .video {
   max-width: 600px;
 
@@ -91,6 +93,7 @@
     }
   }
 }
+//cada card
 .card-depoimento {
   max-width: 250px;
   text-align: center;
@@ -125,6 +128,7 @@
     max-width: 30px;
   }
 }
+//cards no geral
 .cards-depoimentos {
   cursor: grab;
   display: flex;
@@ -132,6 +136,7 @@
   justify-content: center;
 }
 
+//botoes do carrousel
 .slick-next {
   border: transparent;
   height: 50px;
@@ -148,7 +153,6 @@
   background-position: center;
   cursor: pointer;
 }
-//botots
 .slick-prev {
   border: transparent;
   width: 50px;
