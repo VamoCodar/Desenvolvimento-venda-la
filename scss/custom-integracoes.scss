@@ -1,5 +1,12 @@
+//variaveis do projeto
+$poppins: "Poppins", sans-serif;
+$rubik: "Rubik", sans-serif;
+$box-shadow: 0px 3px 6px #00000029;
+$preto-claro: #7b7b7b;
+$azul-claro: #71a1ff;
+$gradiente-azul: linear-gradient(55.35deg, #ffb996 23.24%, #ff5e81 142.28%);
+$footer-color: #fafafa;
 //estilos abaixo dos includes
-
 //mixins
 @mixin degrade {
   //degrade dos botoes
@@ -60,15 +67,6 @@
   }
 }
 
-//variaveis do projeto
-$poppins: "Poppins", sans-serif;
-$rubik: "Rubik", sans-serif;
-$box-shadow: 0px 3px 6px #00000029;
-$preto-claro: #7b7b7b;
-$azul-claro: #71a1ff;
-$gradiente-azul: linear-gradient(55.35deg, #ffb996 23.24%, #ff5e81 142.28%);
-$footer-color: #fafafa;
-
 //imports bootstrap
 //comentados os features que n estão sendo usados
 @import "bootstrap/functions";
@@ -117,6 +115,7 @@ $footer-color: #fafafa;
 //deixar gormulario e footer sempre abaixo
 @import "formulario";
 @import "footer";
+@import "formulario";
 
 //variaveis bootstrap
 $navbar-light-color: transparent;
@@ -125,7 +124,6 @@ $dropdown-border-color: transparent;
 body {
   font-family: $rubik;
   overflow-x: hidden;
-  height: 4000px;
 }
 
 .container {
@@ -143,9 +141,286 @@ body {
 }
  */
 .principal {
-  height: 350px;
-  padding-top: 54px;
+  height: 390px;
   @include degrade-bg;
+  padding-bottom: 50px;
   position: relative;
-  max-width: 100%;
+  p {
+    @include subtitulo-center;
+  }
+  @include d(s) {
+    height: 300px;
+  }
+  .textos {
+    margin: auto 0;
+    padding-top: 60px;
+  }
+}
+//titulo preto
+.titulo-integracoes {
+  @include titulo(38px);
+  @include d(m) {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+//ondas
+.waves {
+  background-image: url(../img/waves.svg);
+  background-repeat: no-repeat;
+  display: block;
+  background-size: contain;
+  background-position: bottom;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -1px;
+}
+
+//primeiro bloco
+.bloco-i {
+  h1 {
+    @include titulo(32px);
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  p {
+    @include subtitulo-center;
+    max-width: 700px;
+  }
+}
+
+//cards
+
+.cards-mark {
+  max-width: 890px;
+  margin: 0 auto;
+  .card {
+    height: 150px;
+    width: 150px;
+    box-shadow: $box-shadow;
+    background: white;
+    margin: 10px 10px;
+    border: none;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: 0.3s;
+    @include d(s) {
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
+
+//imagem dos cards, hover e cursor pointer nos cards com link
+.cards-mark {
+  .card-1 {
+    background-image: url(../img/integracoes/mercado.png);
+  }
+
+  .card-2 {
+    background-image: url(../img/integracoes/integracao-b2w-submarino.png);
+    background-size: 85%;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-30px);
+    }
+  }
+  .card-3 {
+    background-image: url(../img/integracoes/integracao-b2w-americanas.png);
+    background-size: 85%;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-30px);
+    }
+  }
+
+  .card-4 {
+    background-image: url(../img/integracoes/shoptime-logo.png);
+    background-size: 85%;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-30px);
+    }
+  }
+  .card-5 {
+    background-image: url(../img/integracoes/extra-logo-mercado-5.png);
+    background-size: 70%;
+  }
+  .card-6 {
+    background-image: url(../img/integracoes/ponto-frio-logo-300x200.png);
+    background-size: 94%;
+  }
+  .card-7 {
+    background-image: url(../img/integracoes/bahia.png);
+    background-size: 94%;
+  }
+  .card-8 {
+    background-image: url(../img/integracoes/integracao_venda_la_magalu.svg);
+  }
+  .card-9 {
+    background-image: url(../img/integracoes/Amazonlogo.png);
+  }
+  .card-10 {
+    background-image: url(../img/integracoes/madeira-madeira.png);
+  }
+  .card-11 {
+    background-image: url(../img/integracoes/olist.png);
+    background-size: 90%;
+  }
+  .card-12 {
+    background-image: url(../img/integracoes/monetizze.png);
+  }
+  .card-13 {
+    background-image: url(../img/integracoes/integracao-upnid.png);
+  }
+  .card-14 {
+    background-image: url(../img/integracoes/integracao-eduzz.png);
+    background-size: 90%;
+  }
+}
+
+//intermediadores de pagamento
+.cards-mark {
+  .card-1-b {
+    background-image: url(../img/integracoes/integracao-mercado-pago.png);
+    background-size: 90%;
+  }
+  .card-2-b {
+    background-image: url(../img/integracoes/integracoes_perfectpay.png);
+    background-size: 90%;
+  }
+}
+//integrações para erp
+.cards-mark {
+  .card-1-c {
+    background-image: url(../img/integracoes/integracao_venda_la_bling.png);
+    background-size: 90%;
+  }
+  .card-2-c {
+    background-image: url(../img/integracoes/integracao_venda_la_tiny.png);
+    background-size: 90%;
+  }
+  .card-3-c {
+    background-image: url(../img/integracoes/integracao_venda_la_totvs.png);
+    background-size: 90%;
+  }
+  .card-4-c {
+    background-image: url(../img/integracoes/integracao_venda_la_nerus.png);
+    background-size: 90%;
+  }
+  .card-5-c {
+    background-image: url(../img/integracoes/integracao_venda_la_xml.png);
+    background-size: 90%;
+  }
+  .card-6-c {
+    background-image: url(../img/integracoes/integracao_venda_la_api.png);
+    background-size: 90%;
+  }
+}
+
+//integrações para ecommerce
+.cards-mark {
+  .card-1-d {
+    background-image: url(../img/integracoes/integracao_venda_la_vtex.png);
+    background-size: 90%;
+  }
+  .card-2-d {
+    background-image: url(../img/integracoes/integracao_venda_la_loja_integrada.png);
+    background-size: 90%;
+  }
+  .card-3-d {
+    background-image: url(../img/integracoes/integracao_venda_la_mercado_shops.png);
+    background-size: 90%;
+  }
+  .card-4-d {
+    background-image: url(../img/integracoes/integracao_venda_la_magento.png);
+    background-size: 90%;
+  }
+}
+
+//logistica
+.cards-mark {
+  .card-1-e {
+    background-image: url(../img/integracoes/integracao_venda_la_correios.png);
+    background-size: 90%;
+  }
+  .card-2-e {
+    background-image: url(../img/integracoes/integracao_venda_la_mercado_envios.png);
+    background-size: 90%;
+  }
+  .card-3-e {
+    background-image: url(../img/integracoes/integracao_venda_la_mercado_envios_coleta.png);
+    background-size: 90%;
+  }
+  .card-4-e {
+    background-image: url(../img/integracoes/integracao-mercado-full.png);
+    background-size: 80%;
+  }
+  .card-5-e {
+    background-image: url(../img/integracoes/integracao-b2w-entrega.png);
+    background-size: 90%;
+  }
+  .card-6-e {
+    background-image: url(../img/integracoes/integracao-b2w-direct.png);
+    background-size: 90%;
+  }
+  .card-7-e {
+    background-image: url(../img/integracoes/integracao-bff.png);
+    background-size: 90%;
+  }
+  .card-8-e {
+    background-image: url(../img/integracoes/integracao-magalu-entregas.png);
+    background-size: 90%;
+  }
+  .card-9-e {
+    background-image: url(../img/integracoes/integracao_venda_la_melhor_envio.png);
+    background-size: 90%;
+  }
+  .card-10-e {
+    background-image: url(../img/integracoes/integracao-intelipost.png);
+    background-size: 90%;
+  }
+  .card-11-e {
+    background-image: url(../img/integracoes/integracao_venda_la_total_express.png);
+    background-size: 90%;
+  }
+  .card-12-e {
+    background-image: url(../img/integracoes/integracao_venda_la_jadlog.png);
+    background-size: 90%;
+  }
+  .card-13-e {
+    background-image: url(../img/integracoes/integracao_venda_la_jamef.png);
+    background-size: 90%;
+  }
+  .card-14-e {
+    background-image: url(../img/integracoes/integracao-transfolha.png);
+    background-size: 90%;
+  }
+}
+
+//animação dos cards quando scrola
+.passou {
+  .card-2,
+  .card-3,
+  .card-4 {
+    animation: levantadinha 0.6s ease alternate;
+  }
+  .card-2 {
+    animation-delay: 0.8s;
+  }
+  .card-3 {
+    animation-delay: 1.2s;
+  }
+  .card-4 {
+    animation-delay: 1.4s;
+  }
+}
+
+.formulario {
+  margin-top: 120px;
 }
