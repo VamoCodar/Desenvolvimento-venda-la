@@ -9,6 +9,7 @@ footer {
     margin-bottom: 20px;
     @include d(m) {
       text-align: center;
+      font-size: 16px;
     }
   }
   img {
@@ -59,6 +60,10 @@ footer {
 }
 
 .sociais {
+  @include d(s) {
+    max-width: 240px;
+    margin: 0 auto;
+  }
   a {
     @include d(m) {
       width: 50px;
