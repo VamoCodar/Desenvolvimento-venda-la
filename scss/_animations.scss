@@ -11,10 +11,11 @@
 
 @keyframes desceMenu {
   0% {
-    opacity: 0;
-    top: -300px;
+    transform: translateY(-300px);
   }
   100% {
+    transform: translateY(0);
+
     opacity: 1;
     top: 0;
   }
@@ -22,10 +23,10 @@
 
 @-webkit-keyframes sobeMenu {
   0% {
-    top: 0;
+    transform: translateY(0);
   }
   100% {
-    top: -500px;
+    transform: translateY(-300px);
   }
 }
 
@@ -38,54 +39,24 @@
   }
 }
 
-@-webkit-keyframes pula-pula {
-  0% {
-    opacity: 0%;
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
-  }
-
-  100% {
-    opacity: 100%;
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
-}
-
 @keyframes pula-pula {
   0% {
     opacity: 0%;
-    -webkit-transform: translateY(30px);
     transform: translateY(30px);
   }
 
   100% {
     opacity: 100%;
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
-}
-
-@-webkit-keyframes pula-pula2 {
-  0% {
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
-  }
-
-  100% {
-    -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
 }
 
 @keyframes pula-pula2 {
   0% {
-    -webkit-transform: translateY(10px);
     transform: translateY(10px);
   }
 
   100% {
-    -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
 }

@@ -196,7 +196,7 @@ a.dropdown-item {
   border-radius: 0 0 6px 6px;
 
   li {
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 5px 0;
 
     &:last-child {
@@ -206,7 +206,7 @@ a.dropdown-item {
       @include degrade-bg;
     }
     a {
-      padding: 10px 100px;
+      padding: 15px 100px;
     }
     a:hover {
       color: white;

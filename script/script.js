@@ -34,12 +34,21 @@ function resize() {
 function ativaMenu() {
   const menuMobile = document.querySelector(".menu-mobile");
   const linksMenu = document.querySelector(".bg-menu-mobile");
+
   if (!menuMobile.classList.contains("menu-open")) {
     menuMobile.classList.add("menu-open");
-  } else if (menuMobile.classList.contains("menu-open")) {
+    linksMenu.setAttribute(
+      "style",
+      "animation: desceMenu 300ms both ease-out;"
+    );
+    setTimeout(() => {
+      linksMenu.removeAttribute("style", "animation");
+    }, 300);
+  } else {
     linksMenu.setAttribute("style", "animation: sobeMenu 300ms both ease-out;");
     setTimeout(() => {
       menuMobile.classList.remove("menu-open");
+
       linksMenu.removeAttribute("style", "animation");
     }, 300);
   }
