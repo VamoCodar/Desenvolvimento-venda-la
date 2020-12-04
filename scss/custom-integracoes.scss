@@ -137,14 +137,15 @@ body {
 }
 
 //estilos da pagina integrações
-/* .integracoes-item {
-}
- */
 .principal {
   height: 390px;
   @include degrade-bg;
   padding-bottom: 50px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   p {
     @include subtitulo-center;
   }

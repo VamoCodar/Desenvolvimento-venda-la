@@ -32,7 +32,7 @@
 <body>
 
     <!-- titulo e ondas -->
-    <header class="principal row justify-content-center align-items-center">
+    <header class="principal">
         <div class="textos">
             <div class="container">
                 <h1 class="text-white text-center titulo-integracoes">Recursos do HUB Marketplace</h1>
@@ -45,13 +45,16 @@
     <section class="bloco-r-1 pt-5" id="marketplaces">
         <div class="container">
             <div class="row item-1 pt-3">
+                <i class="js-scroll icon-mobile icon-mobile-1"></i>
+                <i class="js-scroll icon-mobile icon-mobile-2"></i>
+
                 <div class="icon col-xl-4">
                 </div>
                 <div class="col-xl-8">
                     <div class="js-scroll">
                         <h2>Gestão de Marketplaces</h2>
                         <p class="desc">A Gestão de múltiplos canais ficam mais simples com os recursos e soluções Venda.la</p>
-                        <a href="integracao.html">Quero integrar</a>
+                        <a class="call" href="integracao.html">Quero integrar</a>
                     </div>
                     <div>
                         <ul class="row">
@@ -74,16 +77,20 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
 
             <div class="row item-2 pt-5" id="ecommerces">
+                <i class="js-scroll icon-mobile icon-mobile-3"></i>
+                <i class="js-scroll icon-mobile icon-mobile-4"></i>
+                <i class="js-scroll icon-mobile icon-mobile-4-b"></i>
                 <div class="icon col-xl-4">
                 </div>
                 <div class="col-xl-8">
                     <div class="js-scroll">
                         <h2>Gestão de E-commerces</h2>
                         <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="integracao.html">Quero integrar</a>
+                        <a class="call" href="integracao.html">Quero integrar</a>
                     </div>
                     <div>
                         <ul class="row">
@@ -109,13 +116,15 @@
                 </div>
             </div>
             <div class="row item-3 pt-5" id="erp">
+                <i class="js-scroll icon-mobile icon-mobile-5"></i>
+                <i class="js-scroll icon-mobile icon-mobile-6"></i>
                 <div class="icon col-xl-4">
                 </div>
                 <div class="col-xl-8">
                     <div class="js-scroll">
                         <h2>Gestão de ERP</h2>
                         <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="integracao.html">Quero integrar</a>
+                        <a class="call" href="integracao.html">Quero integrar</a>
                     </div>
                     <div>
                         <ul class="row">
@@ -141,13 +150,15 @@
                 </div>
             </div>
             <div class="row item-4 pt-5" id="logistica">
+                <i class="js-scroll icon-mobile icon-mobile-7"></i>
+                <i class="js-scroll icon-mobile icon-mobile-8"></i>
                 <div class="icon col-xl-4">
                 </div>
                 <div class="col-xl-8">
                     <div class="js-scroll">
                         <h2>Logística</h2>
                         <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="integracao.html">Quero integrar</a>
+                        <a class="call" href="integracao.html">Quero integrar</a>
                     </div>
                     <div>
                         <ul class="row">
@@ -401,7 +412,7 @@
             <ul class="text-center bg-menu-mobile">
 
                 <li><a href="#">Inicio</a></li>
-                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="#">Recursos</a></li>
                 <li><a href="integracoes.html">Integrações</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Blog</a></li>
@@ -416,13 +427,22 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-    <!-- slick javascript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
-
 
 
     <!-- js vannila -->
     <script>
+
+
+        //animação ao scrool TITULOS
+        const sections = document.querySelectorAll(".js-scroll");
+        function animaScroll() {
+            sections.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < 380) {
+                    section.classList.add("passou");
+                }
+            });
+        }
 
         document.addEventListener("readystatechange", function (event) {
             if (document.readyState === "complete") {
@@ -486,16 +506,6 @@
         }
         menuPreenchido();
 
-        //animação ao scrool TITULOS
-        const sections = document.querySelectorAll(".js-scroll");
-        function animaScroll() {
-            sections.forEach((section) => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < 380) {
-                    section.classList.add("passou");
-                }
-            });
-        }
 
 
 
@@ -513,6 +523,7 @@
             input.value = button.dataset.value;
         }
 
+
         //eventos pilimpimpim
         window.addEventListener("resize", resize);
         window.addEventListener("scroll", menuPreenchido);
@@ -524,5 +535,67 @@
 
 
 </body>
+<!-- rellax js -->
+<script type="text/javascript" src="script/rellax.min.js"></script>
+
+<script>
+    var rellax = new Rellax('.icon-mobile-1', {
+        speed: -1,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false,
+        breakpoints: [480, 760, 1200],
+    });
+
+    var rellax = new Rellax('.icon-mobile-2', {
+        speed: 1,
+        center: true,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false,
+        breakpoints: [480, 760, 1200],
+    });
+    var rellax = new Rellax('.icon-mobile-3', {
+        speed: 1,
+        center: true,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false,
+        breakpoints: [480, 760, 1200],
+    });
+    var rellax = new Rellax('.icon-mobile-3-b', {
+        speed: 1,
+        center: true,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false,
+        breakpoints: [480, 760, 1200],
+    });
+    var rellax = new Rellax('.icon-mobile-5', {
+        speed: -1,
+        center: true,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false,
+        breakpoints: [480, 760, 1200],
+    });
+    var rellax = new Rellax('.icon-mobile-8', {
+        speed: -1,
+        center: true,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false,
+        breakpoints: [480, 760, 1200],
+    });
+
+
+</script>
 
 </html>

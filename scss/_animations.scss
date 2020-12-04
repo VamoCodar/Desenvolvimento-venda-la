@@ -9,6 +9,26 @@
   }
 }
 
+@keyframes rodadinha {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes seta {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
 @keyframes desceMenu {
   0% {
     transform: translateY(-300px);
