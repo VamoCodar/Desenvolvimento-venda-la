@@ -550,7 +550,7 @@
                     <li><a href="#">Contratar</a></li>
                 </ul>
                 <!--  -->
-                <button class="btn-degrade btn-whats ml-md-5">Vamos Conversar</button>
+                <a target="_blank" href="https://api.whatsapp.com/send?1=pt_BR&phone=5516997987946" class="btn-degrade btn-whats ml-md-5">Vamos Conversar</a>
             </div>
         </div>
     </nav>
@@ -559,7 +559,7 @@
     <nav class="menu-mobile fixed-top">
         <div class="container pt-2">
             <div class="row align-items-center justify-content-between">
-                <a class="logo logo-mobile " href="index.html" alt="logo-venda.la"></a>
+                <a class="logo logo-mobile" href="index.html" alt="logo-venda.la"></a>
 
                 <div class="apontador" onclick="ativaMenu()">
                     <i class="hamburguer"></i>
@@ -588,12 +588,13 @@
     <!-- slick javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
 
-
-
     <!-- js vannila -->
     <script type="text/javascript" src="script/script.js"></script>
     <script>
-
+        function preload() {
+            images[0] = new Image();
+            images[0].src = "img/gif-venda-la-2.gif";
+        }
 
         /* script para colocar a imagem em cima do video  enquanto carrega*/
         $(function () {

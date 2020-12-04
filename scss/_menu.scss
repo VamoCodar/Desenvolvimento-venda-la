@@ -7,9 +7,12 @@
   height: 44px;
   margin-top: 10px;
   transition: 0.3s ease;
+  background-size: contain;
 }
 .ativoScrool .logo {
-  background-image: url(../img/logos/venda.la-color.svg);
+  background-image: url(../img/gif-venda-la-2.gif);
+
+  background-size: contain;
 }
 
 //navbar DESKTOP
