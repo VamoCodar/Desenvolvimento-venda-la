@@ -127,7 +127,7 @@
     </section>
 
     <!-- formulario com contato inicio -->
-    <section class="formulario ">
+    <section class="formulario" id="formulario">
         <div class="container">
             <div class="row justify-content-around ">
                 <section class="dados col-lg-6 text-white">
@@ -461,6 +461,32 @@
             button.classList.add("active");
             const input = document.querySelector('[name="experiencia"]');
             input.value = button.dataset.value;
+        }
+
+        //scroll suave
+        const menuItems = document.querySelectorAll('a[href^="#"]');
+
+        menuItems.forEach((item) => {
+            item.addEventListener("click", scrollToIdOnClick);
+        });
+
+        function getScrollTopByHref(element) {
+            const id = element.getAttribute("href");
+            return document.querySelector(id).offsetTop;
+        }
+
+        function scrollToIdOnClick(event) {
+            event.preventDefault();
+            const to = getScrollTopByHref(event.target) - 80;
+            scrollToPosition(to);
+        }
+
+        function scrollToPosition(to) {
+            window.scroll({
+                top: to,
+                behavior: "smooth",
+            });
+            smoothScrollTo(0, to);
         }
 
         //eventos pilimpimpim
