@@ -67,6 +67,11 @@
     @include d(s) {
       margin: 0 auto;
     }
+    @include d(ss) {
+      margin: 0 auto;
+      font-size: 14px;
+      max-width: 250px;
+    }
   }
 }
 

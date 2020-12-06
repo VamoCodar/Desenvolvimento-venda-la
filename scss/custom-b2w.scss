@@ -384,6 +384,9 @@ body {
       text-align: start;
       @include titulo(22px);
       cursor: pointer;
+      @include d(s) {
+        font-size: 18px;
+      }
       &[aria-expanded="false"] {
         &:before {
           content: "";
@@ -421,6 +424,9 @@ body {
         color: #707070;
         display: block;
         padding: 20px;
+        @include d(s) {
+          font-size: 14px;
+        }
       }
     }
   }
