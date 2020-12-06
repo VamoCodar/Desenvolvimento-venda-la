@@ -42,6 +42,7 @@
     font-weight: 500;
     font-size: 40px;
     overflow: hidden;
+
     @include d(m) {
       text-align: center;
     }

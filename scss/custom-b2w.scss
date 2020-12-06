@@ -103,13 +103,13 @@ $footer-color: #fafafa;
 //@import "bootstrap/tables";
 //@import "bootstrap/forms";
 //@import "bootstrap/buttons";
-//@import "bootstrap/transitions";
+@import "bootstrap/transitions";
 @import "bootstrap/dropdown";
 //@import "bootstrap/button-group";
 //@import "bootstrap/input-group";
 //@import "bootstrap/custom-forms";
 //@import "bootstrap/nav";
-//@import "bootstrap/navbar";
+@import "bootstrap/navbar";
 //@import "bootstrap/card";
 //@import "bootstrap/breadcrumb";
 //@import "bootstrap/pagination";
@@ -127,7 +127,7 @@ $footer-color: #fafafa;
 //@import "bootstrap/carousel";
 //@import "bootstrap/spinners";
 @import "bootstrap/utilities"; //usado para alinhamento de textos e etc
-//@import "bootstrap/print";
+@import "bootstrap/print";
 
 //import arquivos feitos a mão sass
 @import "reset";
@@ -215,7 +215,6 @@ body {
 }
  */
 #b2w {
-  height: 2000px;
   .container-b2w {
     max-width: 800px;
     margin: 0 auto;
@@ -307,5 +306,122 @@ body {
   }
   .color-3 {
     background: #ffb016 0% 0% no-repeat padding-box;
+  }
+}
+
+//beneficios
+.bloco-beneficios {
+  margin-bottom: 60px;
+  margin-top: 60px;
+  h2 {
+    @include titulo(32px);
+    margin-bottom: 30px;
+  }
+  .items {
+    div {
+      padding: 25px 10px;
+      max-width: 300px;
+      background: #fafafa 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 8px;
+      margin: 30px 20px;
+      text-align: center;
+      display: inline-block;
+      flex: 0 0 300px;
+      text-align: center;
+      font: normal normal 600 22px/30px Poppins;
+      letter-spacing: 0px;
+      color: #000000;
+      @include d(ss) {
+        font-size: 16px;
+        max-width: 250px;
+        flex: 0 0 250px;
+        margin: 15px 10px;
+      }
+    }
+  }
+}
+
+.integrar {
+  @include botao(16px);
+  display: inline-block;
+  margin-right: 25px;
+  margin: 20px auto;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  padding: 15px 10px;
+  @include d(s) {
+  }
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.06);
+  }
+}
+.diferenciais {
+  margin-bottom: 60px;
+  h2 {
+    @include titulo(32px);
+  }
+  h3 {
+    @include titulo(20px);
+  }
+}
+
+.recursos {
+  margin: 80px 0;
+  h2 {
+    @include titulo(32px);
+    margin-bottom: 40px;
+  }
+  .card {
+    button {
+      background-color: white;
+      display: block;
+      border: 1px solid #eeeeee;
+      width: 100%;
+      padding: 20px 0;
+      text-align: start;
+      @include titulo(22px);
+      cursor: pointer;
+      &[aria-expanded="false"] {
+        &:before {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 10px;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 8px solid black;
+          margin-left: 10px;
+          transition: 0.3s;
+        }
+      }
+      &[aria-expanded="true"] {
+        &:before {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 10px;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-bottom: 8px solid black;
+          margin-left: 10px;
+          transition: 0.3s;
+        }
+      }
+    }
+    .card-body {
+      p {
+        border: 1px solid #eeeeee;
+        color: #707070;
+        display: block;
+        padding: 20px;
+      }
+    }
   }
 }

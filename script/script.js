@@ -1,9 +1,3 @@
-document.addEventListener("readystatechange", function (event) {
-  if (document.readyState === "complete") {
-    console.log("pronto");
-  }
-});
-
 const body = document.querySelector("body");
 
 //função que adiciona a classe mobile ou desktop dependendo do tamanho da tela
@@ -102,9 +96,35 @@ function dropdownValue(event) {
   const input = document.querySelector('[name="experiencia"]');
   input.value = button.dataset.value;
 }
+//scroll suave
+const menuItems = document.querySelectorAll('a[href^="#"]');
+
+menuItems.forEach((item) => {
+  item.addEventListener("click", scrollToIdOnClick);
+});
+
+function getScrollTopByHref(element) {
+  const id = element.getAttribute("href");
+  return document.querySelector(id).offsetTop;
+}
+
+function scrollToIdOnClick(event) {
+  event.preventDefault();
+  const to = getScrollTopByHref(event.target) - 80;
+  scrollToPosition(to);
+}
+
+function scrollToPosition(to) {
+  window.scroll({
+    top: to,
+    behavior: "smooth",
+  });
+  smoothScrollTo(0, to);
+}
 
 //eventos pilimpimpim
 window.addEventListener("resize", resize);
+
 window.addEventListener("scroll", menuPreenchido);
 window.addEventListener("scroll", animaScroll);
 window.addEventListener("scroll", animaCards);

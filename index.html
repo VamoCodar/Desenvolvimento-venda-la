@@ -40,7 +40,7 @@
                 <div class="col-lg-6 row textos">
                     <h1 class="text-white titulo-primary">O único HUB<br> que <strong> trabalha por você</strong></h1>
                     <p>Coloque tarefas no automático. Ganhe tempo e pare de realizar processos manuais.</p>
-                    <button class="btn-degrade">Solicite uma demonstração</button>
+                    <a href="#formulario" class="btn-degrade">Solicite uma demonstração</a>
                 </div>
                 <!-- FIM TEXTO E BTN -->
                 <div class="container-robo">
@@ -137,7 +137,7 @@
         </div>
 
 
-        <a class="btn-demonstracao mt-5" href="demonstracao.html">Conheça todas as integrações</a>
+        <a class="btn-demonstracao mt-5" href="#formulario">Conheça todas as integrações</a>
     </section>
     <!-- fim bloco 2 -->
 
@@ -155,7 +155,7 @@
                         <h2>Rafael Mansberg - RotShop</h2>
                         <p class="mt-4">“Na realidade ele me ajuda na velocidade em que a gente processa os pedidos, os processos que a gente tem aqui dentro, isso vale dinheiro.”</p>
                     </div>
-                    <a href="#">Solicite uma demonstração</a>
+                    <a href="#formulario">Solicite uma demonstração</a>
                 </div>
 
             </div>
@@ -287,7 +287,7 @@
                 <div class="col-lg-6 text-white textos-a">
                     <h1>Automatize seus processos</h1>
                     <h4> e tenha sucesso garantido nos principais marketplaces</h4>
-                    <a href="contratar.index">Vamos Começar</a>
+                    <a href="#formulario">Vamos Começar</a>
                 </div>
                 <div class="col-lg-6 video2-container">
                     <div class=" col-lg-8 embed-responsive embed-responsive-16by9 video video2">
@@ -346,7 +346,7 @@
     <!-- fim do bloco 6 -->
 
     <!-- formulario com contato inicio -->
-    <section class="formulario">
+    <section class="formulario" id="formulario">
         <div class="container">
             <div class="row justify-content-around ">
                 <section class="dados col-lg-6 text-white">
@@ -523,7 +523,7 @@
                     <li><a href="index.html">Inicio</a></li>
                     <!-- dropdown -->
                     <li class="dropdown">
-                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Recursos
                         </a>
                         <div class="dropdown-menu shadow-lg" aria-labelledby="navbarDropdown">
@@ -533,7 +533,7 @@
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Integrações
                         </a>
                         <div class="dropdown-menu shadow-lg" aria-labelledby="navbarDropdown">
@@ -545,12 +545,12 @@
                         </div>
                     </li>
                     <!-- fim  dropdown -->
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contratar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a target="_blank" href="https://vendala.com.br/blog">Blog</a></li>
+                    <li><a href="contratar.html">Contratar</a></li>
                 </ul>
                 <!--  -->
-                <a target="_blank" href="https://api.whatsapp.com/send?1=pt_BR&phone=5516997987946" class="btn-degrade btn-whats ml-md-5">Vamos Conversar</a>
+                <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5516997987946" class="btn-degrade btn-whats ml-md-5">Vamos Conversar</a>
             </div>
         </div>
     </nav>
@@ -569,12 +569,12 @@
         <section class="links-menu">
             <ul class="text-center bg-menu-mobile">
 
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Recursos</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
                 <li><a href="integracoes.html">Integrações</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contratar</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a target="_blank" href="https://vendala.com.br/blog">Blog</a></li>
+                <li><a href="contratar.html">Contratar</a></li>
 
             </ul>
         </section>
@@ -591,6 +591,8 @@
     <!-- js vannila -->
     <script type="text/javascript" src="script/script.js"></script>
     <script>
+        
+        //preload
         function preload() {
             images[0] = new Image();
             images[0].src = "img/gif-venda-la-2.gif";

@@ -10,14 +10,15 @@
   background-size: contain;
 }
 .ativoScrool .logo {
-  background-image: url(../img/gif-venda-la-2.gif);
-
+  background-image: url(../img/gif-venda-la-3.gif);
   background-size: contain;
 }
 
 //navbar DESKTOP
 .navbar-top {
-  transition: 0.2s ease;
+  opacity: 0;
+
+  transition: 0.3s ease-in;
   padding: 5px 0;
   ul {
     justify-content: space-around;
@@ -33,6 +34,7 @@
     }
   }
 }
+
 .ativoScrool .navbar-top {
   transition: 0.3s ease;
   padding: 5px 0;
@@ -98,7 +100,7 @@ a.dropdown-item {
   display: none;
 }
 .desktop .navbar-desktop {
-  display: block;
+  opacity: 1;
 }
 // MOBILE
 .mobile .menu-mobile {

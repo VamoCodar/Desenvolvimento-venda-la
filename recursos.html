@@ -54,7 +54,7 @@
                     <div class="js-scroll">
                         <h2>Gestão de Marketplaces</h2>
                         <p class="desc">A Gestão de múltiplos canais ficam mais simples com os recursos e soluções Venda.la</p>
-                        <a class="call" href="integracao.html">Quero integrar</a>
+                        <a class="call" href="#formulario">Quero integrar</a>
                     </div>
                     <div>
                         <ul class="row">
@@ -90,7 +90,7 @@
                     <div class="js-scroll">
                         <h2>Gestão de E-commerces</h2>
                         <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a class="call" href="integracao.html">Quero integrar</a>
+                        <a class="call" href="#formulario">Quero integrar</a>
                     </div>
                     <div>
                         <ul class="row">
@@ -124,7 +124,7 @@
                     <div class="js-scroll">
                         <h2>Gestão de ERP</h2>
                         <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a class="call" href="integracao.html">Quero integrar</a>
+                        <a class="call" href="#formulario">Quero integrar</a>
                     </div>
                     <div>
                         <ul class="row">
@@ -158,7 +158,7 @@
                     <div class="js-scroll">
                         <h2>Logística</h2>
                         <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a class="call" href="integracao.html">Quero integrar</a>
+                        <a class="call" href="#formulario">Quero integrar</a>
                     </div>
                     <div>
                         <ul class="row">
@@ -189,7 +189,7 @@
     </section>
 
     <!-- formulario com contato inicio -->
-    <section class="formulario ">
+    <section class="formulario" id="formulario">
         <div class="container">
             <div class="row justify-content-around ">
                 <section class="dados col-lg-6 text-white">
@@ -365,7 +365,7 @@
                     <li><a href="index.html">Inicio</a></li>
                     <!-- dropdown -->
                     <li class="dropdown">
-                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Recursos
                         </a>
                         <div class="dropdown-menu shadow-lg" aria-labelledby="navbarDropdown">
@@ -375,7 +375,7 @@
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Integrações
                         </a>
                         <div class="dropdown-menu shadow-lg" aria-labelledby="navbarDropdown">
@@ -387,12 +387,12 @@
                         </div>
                     </li>
                     <!-- fim  dropdown -->
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contratar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a target="_blank" href="https://vendala.com.br/blog">Blog</a></li>
+                    <li><a href="contratar.html">Contratar</a></li>
                 </ul>
                 <!--  -->
-                <button class="btn-degrade btn-whats ml-md-5">Vamos Conversar</button>
+                <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5516997987946" class="btn-degrade btn-whats ml-md-5">Vamos Conversar</a>
             </div>
         </div>
     </nav>
@@ -401,7 +401,7 @@
     <nav class="menu-mobile fixed-top">
         <div class="container pt-2">
             <div class="row align-items-center justify-content-between">
-                <a class="logo logo-mobile " href="index.html" alt="logo-venda.la"></a>
+                <a class="logo logo-mobile" href="index.html" alt="logo-venda.la"></a>
 
                 <div class="apontador" onclick="ativaMenu()">
                     <i class="hamburguer"></i>
@@ -411,18 +411,17 @@
         <section class="links-menu">
             <ul class="text-center bg-menu-mobile">
 
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Recursos</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
                 <li><a href="integracoes.html">Integrações</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contratar</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a target="_blank" href="https://vendala.com.br/blog">Blog</a></li>
+                <li><a href="contratar.html">Contratar</a></li>
 
             </ul>
         </section>
     </nav>
     <!-- fim do menu mobile -->
-
     <!-- BOOTSTRAP JAVASCRIPT -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -521,6 +520,31 @@
             button.classList.add("active");
             const input = document.querySelector('[name="experiencia"]');
             input.value = button.dataset.value;
+        }
+        //scroll suave
+        const menuItems = document.querySelectorAll('a[href^="#"]');
+
+        menuItems.forEach((item) => {
+            item.addEventListener("click", scrollToIdOnClick);
+        });
+
+        function getScrollTopByHref(element) {
+            const id = element.getAttribute("href");
+            return document.querySelector(id).offsetTop;
+        }
+
+        function scrollToIdOnClick(event) {
+            event.preventDefault();
+            const to = getScrollTopByHref(event.target) - 80;
+            scrollToPosition(to);
+        }
+
+        function scrollToPosition(to) {
+            window.scroll({
+                top: to,
+                behavior: "smooth",
+            });
+            smoothScrollTo(0, to);
         }
 
 
