@@ -411,11 +411,31 @@
             const menuMobile = document.querySelector(".menu-mobile");
             const linksMenu = document.querySelector(".bg-menu-mobile");
             if (!menuMobile.classList.contains("menu-open")) {
+                body.classList.add("open");
+
                 menuMobile.classList.add("menu-open");
             } else if (menuMobile.classList.contains("menu-open")) {
                 linksMenu.setAttribute("style", "animation: sobeMenu 300ms both ease-out;");
                 setTimeout(() => {
                     menuMobile.classList.remove("menu-open");
+                    body.classList.remove("open");
+
+                    linksMenu.removeAttribute("style", "animation");
+                }, 300);
+            }
+        }
+        //fecha o menu
+        function fechaMenu(event) {
+            const linksMenu = document.querySelector(".bg-menu-mobile");
+            const menuMobile = document.querySelector(".menu-mobile");
+            const apontador = document.querySelector(".apontador");
+
+            if (body.classList.contains("open") && event.target != apontador) {
+                linksMenu.setAttribute("style", "animation: sobeMenu 300ms both ease-out;");
+                setTimeout(() => {
+                    menuMobile.classList.remove("menu-open");
+                    body.classList.remove("open");
+
                     linksMenu.removeAttribute("style", "animation");
                 }, 300);
             }
@@ -493,6 +513,8 @@
         window.addEventListener("resize", resize);
         window.addEventListener("scroll", menuPreenchido);
         window.addEventListener("scroll", animaScroll);
+        body.addEventListener("click", fechaMenu);
+
 
 
 

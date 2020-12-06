@@ -31,6 +31,7 @@ function ativaMenu() {
 
   if (!menuMobile.classList.contains("menu-open")) {
     menuMobile.classList.add("menu-open");
+    body.classList.add("open");
     linksMenu.setAttribute(
       "style",
       "animation: desceMenu 300ms both ease-out;"
@@ -42,6 +43,23 @@ function ativaMenu() {
     linksMenu.setAttribute("style", "animation: sobeMenu 300ms both ease-out;");
     setTimeout(() => {
       menuMobile.classList.remove("menu-open");
+      body.classList.remove("open");
+
+      linksMenu.removeAttribute("style", "animation");
+    }, 300);
+  }
+}
+//fecha o menu
+function fechaMenu(event) {
+  const linksMenu = document.querySelector(".bg-menu-mobile");
+  const menuMobile = document.querySelector(".menu-mobile");
+  const apontador = document.querySelector(".apontador");
+
+  if (body.classList.contains("open") && event.target != apontador) {
+    linksMenu.setAttribute("style", "animation: sobeMenu 300ms both ease-out;");
+    setTimeout(() => {
+      menuMobile.classList.remove("menu-open");
+      body.classList.remove("open");
 
       linksMenu.removeAttribute("style", "animation");
     }, 300);
@@ -107,13 +125,6 @@ function getScrollTopByHref(element) {
   const id = element.getAttribute("href");
   return document.querySelector(id).offsetTop;
 }
-
-function scrollToIdOnClick(event) {
-  event.preventDefault();
-  const to = getScrollTopByHref(event.target) - 80;
-  scrollToPosition(to);
-}
-
 function scrollToPosition(to) {
   window.scroll({
     top: to,
@@ -122,9 +133,15 @@ function scrollToPosition(to) {
   smoothScrollTo(0, to);
 }
 
+function scrollToIdOnClick(event) {
+  event.preventDefault();
+  const to = getScrollTopByHref(event.target) - 80;
+  scrollToPosition(to);
+}
+
 //eventos pilimpimpim
 window.addEventListener("resize", resize);
-
+body.addEventListener("click", fechaMenu);
 window.addEventListener("scroll", menuPreenchido);
 window.addEventListener("scroll", animaScroll);
 window.addEventListener("scroll", animaCards);
