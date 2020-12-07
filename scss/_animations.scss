@@ -1,14 +1,3 @@
-@-webkit-keyframes desceMenu {
-  0% {
-    opacity: 0;
-    top: -300px;
-  }
-  100% {
-    opacity: 1;
-    top: 0;
-  }
-}
-
 @keyframes rodadinha {
   0% {
     transform: rotate(0);
@@ -31,7 +20,7 @@
 
 @keyframes desceMenu {
   0% {
-    transform: translateY(-300px);
+    transform: translateY(-100%);
   }
   100% {
     transform: translateY(0);
@@ -41,21 +30,12 @@
   }
 }
 
-@-webkit-keyframes sobeMenu {
+@keyframes sobeMenu {
   0% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-300px);
-  }
-}
-
-@keyframes sobeMenu {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -500px;
+    transform: translateY(-100%);
   }
 }
 

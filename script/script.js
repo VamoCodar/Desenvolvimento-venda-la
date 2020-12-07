@@ -54,8 +54,13 @@ function fechaMenu(event) {
   const linksMenu = document.querySelector(".bg-menu-mobile");
   const menuMobile = document.querySelector(".menu-mobile");
   const apontador = document.querySelector(".apontador");
+  const hamburguer = document.querySelector(".hamburguer");
 
-  if (body.classList.contains("open") && event.target != apontador) {
+  if (
+    body.classList.contains("open") &&
+    event.target != apontador &&
+    event.target != hamburguer
+  ) {
     linksMenu.setAttribute("style", "animation: sobeMenu 300ms both ease-out;");
     setTimeout(() => {
       menuMobile.classList.remove("menu-open");
