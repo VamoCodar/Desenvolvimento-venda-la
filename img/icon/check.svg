@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="512px" height="512px" viewbox="0 0 512 512" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L512 0L512 512L0 512L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="check">
+    <path d="M0 0L512 0L512 512L0 512L0 0Z" id="Background" fill="none" fill-rule="evenodd" stroke="none" />
+    <g clip-path="url(#mask_1)">
+      <path d="M312.5 80.372L72.75 321.452L0 248.542L240.11 7.54197C244.872 2.73948 251.348 0.0264511 258.111 0.000190735C264.874 -0.0260696 271.371 2.6366 276.17 7.40196L276.31 7.54197L312.5 43.952C322.498 54.0333 322.498 70.2906 312.5 80.372L312.5 80.372Z" transform="translate(192 64.048035)" id="Shape" fill="#3C7BF9" fill-opacity="1" fill-rule="evenodd" stroke="none" />
+      <path d="M264.672 192.837L210.102 247.707C200.183 257.703 184.039 257.765 174.042 247.847L173.902 247.707L7.50196 80.3471C-2.50065 70.2714 -2.50065 54.0128 7.50196 43.9371L43.702 7.52713C53.604 -2.44231 69.7062 -2.51834 79.702 7.35713L79.862 7.52713L264.672 192.837Z" transform="translate(-0.001953125 192.75287)" id="Shape" fill="#3C7BF9" fill-rule="evenodd" stroke="none" />
+    </g>
+  </g>
+</svg>

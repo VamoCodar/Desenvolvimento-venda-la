@@ -19,7 +19,8 @@
 
     <!-- fonts open sans, rubik, Poppins -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Rubik:wght@400;700&family=Source+Sans+Pro:wght@600;700&display=swap" rel="stylesheet">
+
 
     <!-- SLICK CSS CARROUSEL -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
@@ -34,11 +35,11 @@
 
 <body>
 
-    <section class="intro ">
+    <section class="intro" id="intro">
         <div class="container">
             <div class="row content-intro">
                 <div class="col-lg-6 row textos">
-                    <h1 class="text-white titulo-primary">O único HUB<br> que <strong> trabalha por você</strong></h1>
+                    <h1 class="text-white titulo-primary">O único HUB que<br> <strong> trabalha por você</strong></h1>
                     <p>Coloque tarefas no automático. Ganhe tempo e pare de realizar processos manuais.</p>
                     <a href="#formulario" class="btn-degrade">Solicite uma demonstração</a>
                 </div>
@@ -526,7 +527,7 @@
             <div class="row align-items-center justify-content-end">
                 <a class="logo mr-auto" href="index.html" alt="logo-venda.la"></a>
                 <ul class="row col-7">
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#intro">Inicio</a></li>
                     <!-- dropdown -->
                     <li class="dropdown">
                         <a class="dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -536,6 +537,7 @@
                             <a class="dropdown-item" href="recursos.html#marketplaces">Gestão de Marketplace</a>
                             <a class="dropdown-item" href="recursos.html#ecommerces">Gestão de E-commerce</a>
                             <a class="dropdown-item" href="recursos.html#erp">Gestão de ERP</a>
+                            <a class="dropdown-item" href="recursos.html#logistica">Gestão de Logística</a>
                         </div>
                     </li>
                     <li class="dropdown">
@@ -575,7 +577,7 @@
         <section class="links-menu">
             <ul class="text-center bg-menu-mobile">
 
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#intro">Inicio</a></li>
                 <li><a href="recursos.html">Recursos</a></li>
                 <li><a href="integracoes.html">Integrações</a></li>
                 <li><a href="#formulario">Contato</a></li>
@@ -593,9 +595,10 @@
 
     <!-- slick javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
-
     <!-- js vannila -->
     <script type="text/javascript" src="script/script.js"></script>
+
+
     <script>
 
         //preload
@@ -694,7 +697,36 @@
             ],
         });
 
+        //abrir dropdown
+        $(".dropdown-toggle").on("mouseenter mouseleave", function (e) {
 
+            if ($("body").is(".desktop")) {
+
+                if (e.type == "mouseenter") {
+                    $(this).dropdown("toggle")
+
+                }
+                if (e.type == "mouseleave") {
+                    var $t = $(this);
+                    setTimeout(function () {
+                        $t
+                            .attr("aria-expanded", "false")
+                            .closest(".dropdown")
+                            .removeClass("open"); // remove a classe que abre o menu
+                    }, 100);
+                }
+            }
+        });
+
+        // se sair do menu, dispara o click no botão e esconde
+        $(".dropdown-menu").on("mouseleave", function () {
+            if (!$(".navbar-toggle").is(":visible")) {
+                $(this)
+                    .closest(".dropdown")
+                    .find(".dropdown-toggle")
+                    .trigger("click");
+            }
+        });
 
     </script>
 

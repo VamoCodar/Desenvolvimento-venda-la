@@ -142,6 +142,9 @@ body {
   font-family: $rubik;
   overflow-x: hidden;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .container {
   padding-right: 25px;

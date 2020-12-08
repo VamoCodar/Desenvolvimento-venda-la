@@ -31,7 +31,7 @@
 
       font-size: 14px;
       cursor: pointer;
-      a {
+      a:not(.dropdown-item) {
         vertical-align: middle;
         color: $white;
         text-transform: uppercase;
@@ -74,15 +74,23 @@
 }
 
 .dropdown-item {
-  color: $black !important;
+  color: black;
   padding: 10px 10px;
+  transition: 0.3s;
 }
 
 a.dropdown-item {
   text-transform: capitalize !important;
 }
+@keyframes text-shadow-drop-center {
+  100% {
+    color: #8089ff;
+  }
+}
 .dropdown-item:hover {
-  @include degrade-bg;
+  transition: 0.3s;
+  background: none;
+  animation: text-shadow-drop-center 0.4s ease both;
 }
 
 //estilo botão

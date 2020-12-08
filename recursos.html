@@ -36,15 +36,15 @@
         <div class="textos">
             <div class="container">
                 <h1 class="text-white text-center titulo-integracoes">Recursos do HUB Marketplace</h1>
-                <p class="text-white text-center mt-2">A Venda.la possuí recursos automatizados, inovadores e exclusivos para tornar sua gestão mais segura e eficaz.</p>
+                <p class="text-white text-center mt-2">A Venda.la possui recursos automatizados, inovadores e exclusivos para tornar sua gestão mais segura e eficaz.</p>
             </div>
         </div>
         <span class="waves"></span>
     </header>
 
-    <section class="bloco-r-1 pt-5" id="marketplaces">
+    <section class="bloco-r-1 pt-5">
         <div class="container">
-            <div class="row item-1 pt-3">
+            <div class="row item-1 " id="marketplaces">
                 <i class="js-scroll icon-mobile icon-mobile-1"></i>
                 <i class="js-scroll icon-mobile icon-mobile-2"></i>
 
@@ -80,7 +80,7 @@
 
             </div>
 
-            <div class="row item-2 pt-5" id="ecommerces">
+            <div class="row item-2" id="ecommerces">
                 <i class="js-scroll icon-mobile icon-mobile-3"></i>
                 <i class="js-scroll icon-mobile icon-mobile-4"></i>
                 <i class="js-scroll icon-mobile icon-mobile-4-b"></i>
@@ -115,12 +115,12 @@
 
                 </div>
             </div>
-            <div class="row item-3 pt-5" id="erp">
+            <div class="row item-3" id="erp">
                 <i class="js-scroll icon-mobile icon-mobile-5"></i>
                 <i class="js-scroll icon-mobile icon-mobile-6"></i>
                 <div class="icon col-xl-4">
                 </div>
-                <div class="col-xl-8">
+                <div class="col-xl-8 ">
                     <div class="js-scroll">
                         <h2>Gestão de ERP</h2>
                         <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -149,7 +149,7 @@
 
                 </div>
             </div>
-            <div class="row item-4 pt-5" id="logistica">
+            <div class="row item-4 " id="logistica">
                 <i class="js-scroll icon-mobile icon-mobile-7"></i>
                 <i class="js-scroll icon-mobile icon-mobile-8"></i>
                 <div class="icon col-xl-4">
@@ -372,6 +372,7 @@
                             <a class="dropdown-item" href="recursos.html#marketplaces">Gestão de Marketplace</a>
                             <a class="dropdown-item" href="recursos.html#ecommerces">Gestão de E-commerce</a>
                             <a class="dropdown-item" href="recursos.html#erp">Gestão de ERP</a>
+                            <a class="dropdown-item" href="recursos.html#logistica">Gestão de Logística</a>
                         </div>
                     </li>
                     <li class="dropdown">
@@ -443,11 +444,6 @@
             });
         }
 
-        document.addEventListener("readystatechange", function (event) {
-            if (document.readyState === "complete") {
-                console.log("pronto");
-            }
-        });
 
         const body = document.querySelector("body");
 
@@ -547,31 +543,63 @@
             input.value = button.dataset.value;
         }
         //scroll suave
+
         const menuItems = document.querySelectorAll('a[href^="#"]');
 
-        menuItems.forEach((item) => {
-            item.addEventListener("click", scrollToIdOnClick);
-        });
-
         function getScrollTopByHref(element) {
-            const id = element.getAttribute("href");
+            const id = element.getAttribute('href');
             return document.querySelector(id).offsetTop;
+        }
+
+        function scrollToPosition(to) {
+
+            window.scroll({
+                top: to,
+                behavior: "smooth",
+            })
+
         }
 
         function scrollToIdOnClick(event) {
             event.preventDefault();
-            const to = getScrollTopByHref(event.target) - 80;
+            const to = getScrollTopByHref(event.currentTarget) - 80;
             scrollToPosition(to);
         }
 
-        function scrollToPosition(to) {
-            window.scroll({
-                top: to,
-                behavior: "smooth",
-            });
-            smoothScrollTo(0, to);
-        }
+        menuItems.forEach(item => {
+            item.addEventListener('click', scrollToIdOnClick);
+        });
 
+        //abrir dropdown
+        $(".dropdown-toggle").on("mouseenter mouseleave", function (e) {
+
+            if ($("body").is(".desktop")) {
+
+                if (e.type == "mouseenter") {
+                    $(this).dropdown("toggle")
+
+                }
+                if (e.type == "mouseleave") {
+                    var $t = $(this);
+                    setTimeout(function () {
+                        $t
+                            .attr("aria-expanded", "false")
+                            .closest(".dropdown")
+                            .removeClass("open"); // remove a classe que abre o menu
+                    }, 100);
+                }
+            }
+        });
+
+        // se sair do menu, dispara o click no botão e esconde
+        $(".dropdown-menu").on("mouseleave", function () {
+            if (!$(".navbar-toggle").is(":visible")) {
+                $(this)
+                    .closest(".dropdown")
+                    .find(".dropdown-toggle")
+                    .trigger("click");
+            }
+        });
 
         //eventos pilimpimpim
         body.addEventListener("click", fechaMenu);
@@ -591,6 +619,8 @@
 <script type="text/javascript" src="script/rellax.min.js"></script>
 
 <script>
+
+
     var rellax = new Rellax('.icon-mobile-1', {
         speed: -1,
         center: false,

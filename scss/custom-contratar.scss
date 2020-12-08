@@ -142,6 +142,9 @@ body {
   font-family: $rubik;
   overflow-x: hidden;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .container {
   padding-right: 25px;
@@ -183,6 +186,19 @@ body {
   //botao
   .enviar {
     max-width: 120px;
+  }
+}
+.dropdown-item.active {
+  color: #3c7bf9;
+  &:after {
+    content: "";
+    @include bg-props;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-image: url(../img/icon/check.svg);
+    margin-left: 10px;
+    vertical-align: middle;
   }
 }
 

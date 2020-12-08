@@ -175,6 +175,7 @@
 
 
 
+
     <nav class="navbar-top fixed-top navbar-desktop">
         <div class="container">
             <div class="row align-items-center justify-content-end">
@@ -190,6 +191,7 @@
                             <a class="dropdown-item" href="recursos.html#marketplaces">Gestão de Marketplace</a>
                             <a class="dropdown-item" href="recursos.html#ecommerces">Gestão de E-commerce</a>
                             <a class="dropdown-item" href="recursos.html#erp">Gestão de ERP</a>
+                            <a class="dropdown-item" href="recursos.html#logistica">Gestão de Logística</a>
                         </div>
                     </li>
                     <li class="dropdown">
@@ -205,7 +207,7 @@
                         </div>
                     </li>
                     <!-- fim  dropdown -->
-                    <li><a href="#formulario">Contato</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                     <li><a target="_blank" href="https://vendala.com.br/blog">Blog</a></li>
                     <li><a href="contratar.html">Contratar</a></li>
                 </ul>
@@ -233,7 +235,7 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="recursos.html">Recursos</a></li>
                 <li><a href="integracoes.html">Integrações</a></li>
-                <li><a href="#formulario">Contato</a></li>
+                <li><a href="contato.html">Contato</a></li>
                 <li><a target="_blank" href="https://vendala.com.br/blog">Blog</a></li>
                 <li><a href="contratar.html">Contratar</a></li>
 
@@ -361,6 +363,64 @@
             input.value = button.dataset.value;
         }
 
+        //scroll suave
+
+        const menuItems = document.querySelectorAll('a[href^="#"]');
+
+        function getScrollTopByHref(element) {
+            const id = element.getAttribute('href');
+            return document.querySelector(id).offsetTop;
+        }
+
+        function scrollToPosition(to) {
+
+            window.scroll({
+                top: to,
+                behavior: "smooth",
+            })
+
+        }
+
+        function scrollToIdOnClick(event) {
+            event.preventDefault();
+            const to = getScrollTopByHref(event.currentTarget) - 80;
+            scrollToPosition(to);
+        }
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', scrollToIdOnClick);
+        });
+
+        //abrir dropdown
+        $(".dropdown-toggle").on("mouseenter mouseleave", function (e) {
+
+            if ($("body").is(".desktop")) {
+
+                if (e.type == "mouseenter") {
+                    $(this).dropdown("toggle")
+
+                }
+                if (e.type == "mouseleave") {
+                    var $t = $(this);
+                    setTimeout(function () {
+                        $t
+                            .attr("aria-expanded", "false")
+                            .closest(".dropdown")
+                            .removeClass("open"); // remove a classe que abre o menu
+                    }, 100);
+                }
+            }
+        });
+
+        // se sair do menu, dispara o click no botão e esconde
+        $(".dropdown-menu").on("mouseleave", function () {
+            if (!$(".navbar-toggle").is(":visible")) {
+                $(this)
+                    .closest(".dropdown")
+                    .find(".dropdown-toggle")
+                    .trigger("click");
+            }
+        });
 
         //eventos pilimpimpim
         window.addEventListener("resize", resize);

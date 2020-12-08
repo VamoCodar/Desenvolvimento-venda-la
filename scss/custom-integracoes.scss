@@ -66,6 +66,11 @@ $footer-color: #fafafa;
     font-size: 16px;
   }
 }
+@mixin bg-props {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 
 //imports bootstrap
 //comentados os features que n estão sendo usados
@@ -124,6 +129,9 @@ $dropdown-border-color: transparent;
 body {
   font-family: $rubik;
   overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .container {

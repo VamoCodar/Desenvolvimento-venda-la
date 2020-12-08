@@ -118,6 +118,20 @@
       right: 25px;
       opacity: 50%;
     }
+    .dropdown-item.active {
+      font-weight: 700;
+      color: #3c7bf9;
+      &:after {
+        content: "";
+        @include bg-props;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-image: url(../img/icon/check.svg);
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    }
   }
   .dropdown-toggle {
     border: none;
@@ -138,6 +152,9 @@
       @include d(s) {
         font-size: 12px;
       }
+    }
+    button {
+      background: none;
     }
   }
   .dropdown-toggle::after {

@@ -57,6 +57,11 @@
     font-size: 16px;
   }
 }
+@mixin bg-props {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 
 //variaveis do projeto
 $poppins: "Poppins", sans-serif;
@@ -126,10 +131,14 @@ $footer-color: #fafafa;
 //variaveis bootstrap
 $navbar-light-color: transparent;
 $dropdown-border-color: transparent;
+$dropdown-link-color: black;
 
 body {
   font-family: $rubik;
   overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .container {

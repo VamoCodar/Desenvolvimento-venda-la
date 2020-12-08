@@ -215,6 +215,7 @@
                             <a class="dropdown-item" href="recursos.html#marketplaces">Gestão de Marketplace</a>
                             <a class="dropdown-item" href="recursos.html#ecommerces">Gestão de E-commerce</a>
                             <a class="dropdown-item" href="recursos.html#erp">Gestão de ERP</a>
+                            <a class="dropdown-item" href="recursos.html#logistica">Gestão de Logística</a>
                         </div>
                     </li>
                     <li class="dropdown">
@@ -385,6 +386,37 @@
             const input = document.querySelector('[name="experiencia"]');
             input.value = button.dataset.value;
         }
+
+
+        //abrir dropdown
+        $(".dropdown-toggle").on("mouseenter mouseleave", function (e) {
+
+            if ($("body").is(".desktop")) {
+                if (e.type == "mouseenter") {
+                    $(this).dropdown("toggle")
+
+                }
+                if (e.type == "mouseleave") {
+                    var $t = $(this);
+                    setTimeout(function () {
+                        $t
+                            .attr("aria-expanded", "false")
+                            .closest(".dropdown")
+                            .removeClass("open"); // remove a classe que abre o menu
+                    }, 100);
+                }
+            }
+        });
+
+        // se sair do menu, dispara o click no botão e esconde
+        $(".dropdown-menu").on("mouseleave", function () {
+            if (!$(".navbar-toggle").is(":visible")) {
+                $(this)
+                    .closest(".dropdown")
+                    .find(".dropdown-toggle")
+                    .trigger("click");
+            }
+        });
 
 
         //eventos pilimpimpim

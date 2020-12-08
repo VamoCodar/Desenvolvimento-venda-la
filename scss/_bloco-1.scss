@@ -37,11 +37,14 @@
   //titulo
 
   h1 {
-    font-family: $poppins;
+    font-family: "Source Sans Pro", sans-serif;
     margin-bottom: 20px;
-    font-weight: 500;
-    font-size: 40px;
+    font-weight: 600;
+    font-size: 46px;
     overflow: hidden;
+    strong {
+      font-weight: 700;
+    }
 
     @include d(m) {
       text-align: center;
@@ -139,14 +142,14 @@
       right: 500px;
       animation: pula-pula 1.2s both ease-in-out 1s,
         pula-pula2 2s infinite alternate-reverse ease-in-out 2.2s;
-      top: 100px;
+      top: 90px;
     }
     .card5 {
       background-image: url(../img/cards-intro/magalu.svg);
       right: 515px;
       animation: pula-pula 1.2s both ease-in-out 1s,
         pula-pula2 2.5s infinite alternate-reverse ease-in-out 2.4s;
-      top: 180px;
+      top: 160px;
     }
     .card6 {
       background-image: url(../img/cards-intro/mercado-livre.svg);
