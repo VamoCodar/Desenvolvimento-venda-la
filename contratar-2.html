@@ -21,109 +21,161 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS customizado -->
-    <link rel="stylesheet" href="css/custom-contato.css">
+    <link rel="stylesheet" href="css/custom-contratar-2.css">
 
 
 
 
-    <title>Contato - Venda.la</title>
+    <title>Contratar - Venda.la</title>
 </head>
 
 <body>
 
 
-    <!-- formulario com contato inicio -->
+    <!-- formulario contato inicio -->
     <section class="formulario" id="formulario">
         <div class="container">
-            <div class="text-inicio text-white">
-                <h2>Entre em contato com o HUB Marketplace Venda.la</h2>
-                <p>Nossos especialistas em marketplace retornarão seu contato o mais breve possível.</p>
-            </div>
-            <div class="row justify-content-between ">
-                <section class="dados col-lg-6 text-white">
-                    <ul>
 
-
-                        <li>
-                            <h1>Venda.la - Melhor HUB Marketplace do Mercado</h1>
-                        </li>
-
-
-                        <li>
-                            <p>A Venda.la conta com uma série de recursos e automações para marketplaces que irão agilizar sua gestão e torná-la mais segura. Vamos marcar uma reunião? Preencha o formulário abaixo e um de nossos especialistas entrará em contato para verificar os desafios de sua empresa e apresentar todas as soluções que a Venda.la possuí.</p>
-                        </li>
-
-                        <li class="bloco-2">
-                            <p>Rua Américo Brasiliense, 284, Centro - Ribeirão Preto - SP</p>
-                            <a href="mailto:contato@vendala.com.br">
-                                <p class="contato">contato@vendala.com.br</p>
-                            </a>
-                            <p class="tel">(16) 3625-6951 / (11) 2626-5215</p>
-                            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5516997987946">
-                                <p class="whats">(16) 99798-7946</p>
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </section>
-
-                <!-- formulario bonitinho cheirosinho -->
-                <section class="form-container col-lg-5 ">
-
+            <div class="row justify-content-center ">
+                <section class="form-container col-lg-5 text-white ">
+                    <div class="text text-white text-center">
+                        <p>Olá Teste_fluxo! Obrigado por se cadastrar na Venda.la</p>
+                        <p>Agora preencha todas as informações abaixo e aguarde a instalação. Você receberá um e-mail quado tudo tiver pronto para você começar a usar.</p>
+                        <p>Atenção! Verificar o e-mail em sua caixa de SPAM</p>
+                    </div>
                     <form action="#" method="post">
                         <fieldset class="row">
                             <!-- campos -->
+                            <h5 class="text-white">Dados de acesso</h5>
+                            <!-- loguin-senha -->
+                            <div class="row duo">
 
-                            <!-- nome -->
-                            <div class="campo col-6">
-                                <label for="nome">Nome</label>
-                                <input type="text" name="nome" id="nome" required placeholder="Nome Completo">
-                            </div>
+                                <div class="campo col-md-6">
 
-                            <!-- email -->
-                            <div class="campo col-6">
-                                <label for="email">Email</label>
-                                <input type="text" name="email" id="email" required placeholder="Seu melhor E-mail">
-                            </div>
-
-                            <!-- empresa -->
-                            <div class="campo col-6 ">
-                                <label for="empresa">Empresa</label>
-                                <input type="text" name="empresa" id="empresa" required placeholder="Sua Empresa">
-                            </div>
-
-                            <!-- telefone -->
-                            <div class="campo col-6 ">
-                                <label for="telefone">Telefone</label>
-                                <input type="text" name="telefone" id="telefone" required placeholder="Telefone com DDD">
-                            </div>
-                            <!-- dropdown -->
-                            <div class="campo col-12  dropdown">
-                                <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Sua experiência em marketplaces
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuButton">
-                                    <input type="hidden" id="experiencia" name="experiencia" value="0" required />
-
-                                    <button onclick="dropdownValue(event)" class=" active dropdown-item" data-value="4">Vendo em 2 ou mais marketplaces</button>
-                                    <button onclick="dropdownValue(event)" class="dropdown-item" data-value="3">Vendo em 1 marketplace</button>
-                                    <button onclick="dropdownValue(event)" class="dropdown-item" data-value="2">Quero começar a vender em marketplaces</button>
-                                    <button onclick="dropdownValue(event)" class="dropdown-item" data-value="1">Não quero vender em marketplaces</button>
+                                    <label for="login">Login</label>
+                                    <input type="text" name="login" id="login" required>
+                                </div>
+                                <div class="campo col-md-6">
+                                    <label for="senha">Senha</label>
+                                    <input type="password" name="senha" id="senha" required aria-describedby="password">
                                 </div>
                             </div>
-                            <!-- fim dropdown -->
-                            <button class="enviar mt-3" type="submit" name="submit">Enviar</button>
-                        </fieldset>
 
+                            <!-- dados de acesso -->
+                            <div class="row">
+
+                                <div class="campo col-12 loja">
+                                    <div>
+                                        <label for="loja">Nome da Loja</label>
+
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">https://app.venda.la</div>
+                                            </div>
+                                            <input type="text" class="form-control" id="link-acesso" placeholder="link-de-acesso">
+                                        </div>
+                                        <p class="text-white">Atenção: O link acima será o <u>endereço de acesso</u> do seu painel Venda.la</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- dados gerais -->
+                            <div class="gerais">
+                                <h5 class="text-white">Dados Gerais</h5>
+                                <div class="row mx-0">
+                                    <label for="loja">Tipo de Cadastro</label>
+                                    <button class=" dropdown-toggle col-md-12" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Selecione
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuButton">
+                                        <input type="hidden" id="experiencia" name="experiencia" value="0" required />
+
+                                        <button onclick="dropdownValue(event)" class=" active dropdown-item" data-value="1">Full - R$499,00 / setup</button>
+
+
+
+                                    </div>
+                                </div>
+                                <!-- endereço -->
+                                <div class="row mb-2 endereco">
+                                    <div class="campo col-md-7">
+                                        <p class="mb-2">Endereço</p>
+                                        <label for="rua">Rua / Avenida</label>
+                                        <input type="text" name="rua" id="rua" required>
+                                    </div>
+                                    <div class="campo col-md-5 mt-auto">
+                                        <label for="numero">Número</label>
+                                        <input type="text" name="numero" id="numero" required>
+                                    </div>
+                                </div>
+                                <div class="row mb-2 complemento">
+                                    <div class="campo col-md-6">
+                                        <label for="complemento">Complemento</label>
+                                        <input type="text" name="complemento" id="complemento" required>
+                                    </div>
+                                    <div class="campo col-md-6 mt-auto">
+                                        <label for="bairro">Bairro</label>
+                                        <input type="text" name="bairro" id="bairro" required>
+                                    </div>
+                                </div>
+                                <div class="row mb-2 cidade">
+                                    <div class="campo col-md-6">
+                                        <label for="cidade">Cidade</label>
+                                        <input type="text" name="cidade" id="cidade" required>
+
+                                    </div>
+                                    <div class="campo col-md-6 mt-auto">
+                                        <label for="estado">Estado</label>
+                                        <input type="text" name="estado" id="estado" required>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- dados de contato -->
+                            <h5 class="mb-2">Dados de contato e notificação por e-mail</h5>
+                            <div class="row mb-2 contato-notificacao">
+                                <div class="campo col-md-6">
+
+                                    <label for="tel-1">Telefone 1</label>
+                                    <input type="tel" name="tel-1" id="tel-1" required>
+                                </div>
+                                <div class="campo col-md-6 mt-auto">
+                                    <label for="tel-2">Telefone 2</label>
+                                    <input type="tel" name="tel-2" id="tel-2" required>
+                                </div>
+                            </div>
+                            <!-- emails -->
+                            <div class="row mb-2 contato-notificacao">
+                                <div class="campo col-md-6">
+
+                                    <label for="email-1">E-mail principal</label>
+                                    <input type="email" name="email-1" id="email-1" required>
+                                </div>
+                                <div class="campo col-md-6 mt-auto">
+                                    <label for="email-2">E-mail secundario</label>
+                                    <input type="email" name="email-2" id="email-2" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button style="margin-left: 15px;" class="enviar mt-3" type="submit" name="submit">Salvar</button>
+                            </div>
+
+
+                        </fieldset>
                     </form>
                 </section>
-                <!-- fim da secao do formulario -->
-
             </div>
 
+
+
+
+
+            <!-- fim da secao do formulario -->
+
         </div>
+
     </section>
+
     <!--  FIM do formulario -->
     <footer>
         <div class="container">
@@ -200,6 +252,7 @@
 
 
 
+
     <nav class="navbar-top fixed-top navbar-desktop">
         <div class="container">
             <div class="row align-items-center justify-content-end">
@@ -231,7 +284,7 @@
                         </div>
                     </li>
                     <!-- fim  dropdown -->
-                    <li><a href="#formulario">Contato</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                     <li><a target="_blank" href="https://vendala.com.br/blog">Blog</a></li>
                     <li><a href="contratar.html">Contratar</a></li>
                 </ul>
@@ -259,7 +312,7 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="recursos.html">Recursos</a></li>
                 <li><a href="integracoes.html">Integrações</a></li>
-                <li><a href="#formulario">Contato</a></li>
+                <li><a href="contato.html">Contato</a></li>
                 <li><a target="_blank" href="https://vendala.com.br/blog">Blog</a></li>
                 <li><a href="contratar.html">Contratar</a></li>
 
@@ -274,6 +327,7 @@
 
     <!-- slick javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+
 
 
 
@@ -387,6 +441,34 @@
             input.value = button.dataset.value;
         }
 
+        //scroll suave
+
+        const menuItems = document.querySelectorAll('a[href^="#"]');
+
+        function getScrollTopByHref(element) {
+            const id = element.getAttribute('href');
+            return document.querySelector(id).offsetTop;
+        }
+
+        function scrollToPosition(to) {
+
+            window.scroll({
+                top: to,
+                behavior: "smooth",
+            })
+
+        }
+
+        function scrollToIdOnClick(event) {
+            event.preventDefault();
+            const to = getScrollTopByHref(event.currentTarget) - 80;
+            scrollToPosition(to);
+        }
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', scrollToIdOnClick);
+        });
+
 
         //abrir dropdown
         $(".navbar-top .dropdown-toggle").on("mouseenter mouseleave", function (e) {
@@ -420,6 +502,8 @@
         });
 
 
+
+
         //eventos pilimpimpim
         window.addEventListener("resize", resize);
         window.addEventListener("scroll", menuPreenchido);
@@ -428,9 +512,7 @@
 
 
 
-
     </script>
-
 
 </body>
 

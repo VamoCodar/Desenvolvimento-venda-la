@@ -1,3 +1,4 @@
+/* arquivo prefixado leia a documentação para saber como editar  */
 .bloco-4 {
   //titulos
   h1 {
@@ -50,6 +51,7 @@
   }
 }
 .titulo-ic {
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -76,8 +78,6 @@
 .bloco-4 div.passou {
   //animação
   span {
-    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
-      0.3s;
     animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 0.3s;
   }
 }

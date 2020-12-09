@@ -1,0 +1,135 @@
+//ANTES DE TUDO, SITES FEITOS EM SASS NUNCA DEVEM SER ALTERADOS DIRETAMENTE NO ARQUIVO .CSS DEVEM SER ALTERADOS
+//NOS ARQUIVOS .SASS E DEPOIS SERAO COMPILADOS AUTOMATICAMENTE PARA O .CSS
+// Sass é um preprocessador de css para escrever um css mais eficiente com menos codigo
+// Para compila-lo você precisa de um programa externo
+//para windows http://scout-app.io/ open source
+//PARA COMPILAR
+//1° jogue a pasta do projeto dentro dele => ela precisa conter pasta de entrada ../scss e a pasta de saida ../css =>  após de start no projeto e ele ira compilar tudo pra você
+//2° selecione o ambiente se quer um css comprimido ou expandido
+// o scout compila o arquivo .scss escrito e cospe um arquivo css
+//arquivos iniciados com _nome-do-arquivo.scss (underline) não geram um arquivo css
+// bom para arquivos que vão ser exportados...
+
+//declara varial no sass como simbolo de $
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+// gera no css
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+//nesting no css emgloba os elentos sem precisar repetir a tag, basicamente o escopo do javascript
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+//gera  no css
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+// se importa um arquivo no sass usando o
+@import "nome-do-arquivo";
+
+//mixins são uma mão na roda pois te impede de repetir toda vez o mesmo codigo
+//Um mixin permite que você faça grupos de  declarações CSS que deseja reutilizar em todo o seu site.
+//mixins tambem podem receber parametros variveis
+
+//nesse mixin adiciona um paramentro onde o parão é 40px
+@mixin titulo($tamanho: 40px) {
+  font-family: $Arial;
+  font-weight: 700;
+  font-size: $tamanho;
+}
+//como usar
+h1 {
+  @include titulo(tamanho-do texto: se nao passado padrao 40px);
+}
+//gera
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+//exemplo mixin que gera media queries
+
+h1 {
+  font-size: 20px; //acima de  s(540px) 20px abaixo disso 14px
+  @include d(s) {
+    font-size: 14px;
+  }
+}
+//gera
+h1 {
+  font-size: 20px;
+}
+@media screen and (max-width: 539px) {
+  h1 {
+    font-size: 14px;
+  }
+}
+
+//mixin de media query completo
+
+//variaveis do grid
+$l-device: 1140px; //large
+$m-device: 993px; //medium
+$s-device: 540px; //small
+$ss-device: 370px; //small small
+
+//mixin media querie
+@mixin d($size) {
+  @if $size==l {
+    @media screen and (min-width: $m-device) {
+      //acima do medio
+      @content;
+    }
+  } @else if $size==m {
+    @media screen and (max-width: $m-device - 1) {
+      //abaixo do medio
+      @content;
+    }
+  } @else if $size==s {
+    @media screen and (max-width: $s-device - 1) {
+      @content;
+    }
+  } @else if $size==ss {
+    @media screen and (max-width: $ss-device - 1) {
+      @content;
+    }
+  }
+}
+
+//acima temos as variaveis de tamanho que podem ser alteradas para funcionar com o mixen
+//temos a condição para gerar as entradas
+
+//basicamente é isso, bom css eficiente

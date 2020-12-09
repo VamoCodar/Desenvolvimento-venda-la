@@ -1,3 +1,5 @@
+/* arquivo prefixado leia a documentação para saber como editar  */
+
 //background e padding basico
 .formulario {
   @include degrade-bg3;
@@ -7,6 +9,7 @@
 
 .dados {
   @include d(m) {
+    -ms-flex-order: 2;
     order: 2;
   }
   //contato
@@ -42,9 +45,9 @@
     margin-top: 10px;
   }
 }
+//titulo vamos crescer
 
 .form-container {
-  //titulo vamos crescer
   font-family: $poppins;
   h1 {
     font-size: 26px;
@@ -69,13 +72,30 @@
   }
 
   //texto dentro dos inputs
+  input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.379);
+  }
+
+  //texto dentro dos inputs
+  input::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.379);
+  }
+
+  //texto dentro dos inputs
+  input:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.379);
+  }
+
+  //texto dentro dos inputs
   input::placeholder {
     color: rgba(0, 0, 0, 0.379);
   }
 
   //divisão dos campos, as colunas no html mandam como vão posicionar
   .campo {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
     @include d(s) {
       max-width: 100%;
@@ -166,7 +186,10 @@
 fieldset {
   @include d(s) {
     min-inline-size: 250px;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
     padding-inline-start: 0;
+    -webkit-padding-before: 0;
     padding-block-start: 0;
   }
 }

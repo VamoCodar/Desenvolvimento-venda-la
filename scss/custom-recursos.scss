@@ -1,3 +1,6 @@
+/* arquivo prefixado leia a documentação para saber como editar 
+copiar do body pra baixo pra desprefixar */
+
 //variaveis do projeto
 $poppins: "Poppins", sans-serif;
 $rubik: "Rubik", sans-serif;
@@ -148,6 +151,10 @@ html {
   position: relative;
 }
 
+::-moz-selection {
+  background: #54d39b;
+}
+
 ::selection {
   background: #54d39b;
 }
@@ -158,9 +165,13 @@ html {
   @include degrade-bg;
   padding-bottom: 50px;
   position: relative;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   p {
     @include subtitulo-center;
@@ -238,6 +249,7 @@ h1 {
   .icon {
     @include bg-props;
     background-image: url(../img/recursos/ecommerce.png);
+    -ms-flex-order: 2;
     order: 2;
   }
 }
@@ -252,6 +264,7 @@ h1 {
   .icon {
     @include bg-props;
     background-image: url(../img/recursos/logistica.png);
+    -ms-flex-order: 2;
     order: 2;
   }
 }
@@ -259,10 +272,14 @@ h1 {
 .mobile {
   //oculta icones desktop
   .js-scroll {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .call {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     margin: 10px auto;
   }

@@ -1,3 +1,5 @@
+/* arquivo prefixado leia a documentação para saber como editar  */
+
 /* Os maiores marketplaces
 integrados em um só lugar */
 
@@ -15,14 +17,19 @@ integrados em um só lugar */
 //estrutura, cards e imagem
 
 .grid-container {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: minmax(120px, 1fr) auto minmax(120px, 1fr);
   grid-template-columns: minmax(120px, 1fr) auto minmax(120px, 1fr);
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 //lista de cards
 .cards-markt {
+  display: -ms-grid;
   display: grid;
+  -ms-flex-pack: center;
   justify-content: center;
 
   a {
@@ -35,7 +42,9 @@ integrados em um só lugar */
     box-shadow: $box-shadow;
     height: 60px;
     border-radius: $border-radius;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-align: center;
     align-items: center;
     background-color: $white;
 
@@ -58,6 +67,8 @@ integrados em um só lugar */
   }
 }
 .img-people {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
 }
 //versão mobile
@@ -75,6 +86,7 @@ integrados em um só lugar */
 }
 
 .mobile .grid-container {
+  -ms-grid-columns: 80px auto 80px;
   grid-template-columns: 80px auto 80px;
 }
 

@@ -1,3 +1,5 @@
+/* arquivo prefixado leia a documentação para saber como editar  */
+
 .logo {
   background-image: url(../img/logos/venda.la-wite.svg);
   background-repeat: no-repeat;
@@ -21,6 +23,7 @@
   transition: 0.3s ease-in;
   padding: 5px 0;
   ul {
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     margin-bottom: 0;
     color: $white;
@@ -45,6 +48,7 @@
   padding: 5px 0;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   ul {
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     margin-bottom: 0;
     color: $black;
@@ -82,11 +86,7 @@
 a.dropdown-item {
   text-transform: capitalize !important;
 }
-@keyframes text-shadow-drop-center {
-  100% {
-    color: #8089ff;
-  }
-}
+
 .dropdown-item:hover {
   transition: 0.3s;
   background: none;
@@ -134,8 +134,11 @@ a.dropdown-item {
   cursor: pointer;
   width: 54px;
   height: 54px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   z-index: 9;
 }

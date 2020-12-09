@@ -1,3 +1,6 @@
+/* arquivo prefixado leia a documentação para saber como editar 
+copiar do body pra baixo pra desprefixar */
+
 //variaveis do projeto
 $poppins: "Poppins", sans-serif;
 $rubik: "Rubik", sans-serif;
@@ -161,6 +164,10 @@ html {
   position: relative;
 }
 
+::-moz-selection {
+  background: #54d39b;
+}
+
 ::selection {
   background: #54d39b;
 }
@@ -171,9 +178,13 @@ html {
   @include degrade-bg;
   padding-bottom: 50px;
   position: relative;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   p {
     @include subtitulo-center;
@@ -208,19 +219,6 @@ html {
   margin-bottom: -1px;
 }
 
-//primeiro bloco
-/* .bloco-i {
-  h1 {
-    @include titulo(32px);
-    margin-bottom: 20px;
-    margin-top: 40px;
-  }
-  p {
-    @include subtitulo-center;
-    max-width: 700px;
-  }
-}
- */
 #b2w {
   .container-b2w {
     max-width: 800px;
@@ -241,8 +239,10 @@ html {
       display: inline-block;
       margin-right: 25px;
       @include d(s) {
+        display: -ms-flexbox;
         display: flex;
         max-width: 200px;
+        -ms-flex-pack: center;
         justify-content: center;
         margin: 0 auto;
       }
@@ -255,8 +255,10 @@ html {
       @include botao-b2w(16px);
       display: inline-block;
       @include d(s) {
+        display: -ms-flexbox;
         display: flex;
         max-width: 230px;
+        -ms-flex-pack: center;
         justify-content: center;
         margin: 0 auto;
         margin-top: 20px;
@@ -271,6 +273,7 @@ html {
 }
 
 .cards-coloridos {
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   margin-top: 40px;
   a {
@@ -334,6 +337,7 @@ html {
       margin: 30px 20px;
       text-align: center;
       display: inline-block;
+      -ms-flex: 0 0 300px;
       flex: 0 0 300px;
       text-align: center;
       font: normal normal 600 22px/30px Poppins;
@@ -342,6 +346,7 @@ html {
       @include d(ss) {
         font-size: 16px;
         max-width: 250px;
+        -ms-flex: 0 0 250px;
         flex: 0 0 250px;
         margin: 15px 10px;
       }
@@ -355,7 +360,9 @@ html {
   margin-right: 25px;
   margin: 20px auto;
   max-width: 200px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 15px 10px;
   @include d(s) {

@@ -1,3 +1,5 @@
+/* arquivo prefixado leia a documentação para saber como editar  */
+
 body,
 p,
 h1,
@@ -38,8 +40,16 @@ img {
 }
 
 fieldset {
+  -webkit-margin-start: 0px;
+  -moz-margin-start: 0px;
   margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+  -moz-margin-end: 0px;
   margin-inline-end: 0px;
+
+  min-inline-size: -webkit-min-content;
+
+  min-inline-size: -moz-min-content;
 
   min-inline-size: min-content;
   border-width: 2px;
@@ -57,6 +67,8 @@ fieldset {
   text-shadow: none;
   display: inline-block;
   text-align: start;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   background-color: none;
   -webkit-rtl-ordering: logical;

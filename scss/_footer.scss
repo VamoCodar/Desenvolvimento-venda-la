@@ -1,3 +1,5 @@
+/* arquivo prefixado leia a documentação para saber como editar  */
+
 footer {
   background: $footer-color;
   padding: 40px 0;
@@ -22,6 +24,7 @@ footer {
     margin-bottom: 10px;
   }
   @include d(m) {
+    -ms-flex-order: -2;
     order: -2;
     margin-bottom: 30px;
   }
@@ -33,6 +36,7 @@ footer {
     margin-bottom: 10px;
   }
   @include d(m) {
+    -ms-flex-order: -1;
     order: -1;
     margin-bottom: 30px;
   }

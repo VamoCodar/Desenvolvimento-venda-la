@@ -1,13 +1,17 @@
+/* arquivo prefixado leia a documentação para saber como editar  */
+
 .bloco-3 {
   @include degrade-bg2;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 93%, 0 100%);
   clip-path: polygon(0 10%, 100% 0, 100% 93%, 0 100%);
   padding-top: 160px;
   margin-top: 90px;
   @include d(s) {
+    -webkit-clip-path: polygon(0 6%, 100% 0, 100% 96%, 0 100%);
     clip-path: polygon(0 6%, 100% 0, 100% 96%, 0 100%);
   }
+  //depoimento
   h1 {
-    //depoimento
     font-family: $poppins;
     margin-bottom: 20px;
     font-size: 32px;
@@ -19,8 +23,9 @@
       font-size: 26px;
     }
   }
+  //rafael mansberg
+
   h2 {
-    //rafael mansberg
     font-size: 20px;
     font-family: $poppins;
 

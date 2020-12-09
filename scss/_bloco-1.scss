@@ -1,11 +1,14 @@
+/* arquivo prefixado leia a documentação para saber como editar  */
+
 //seção entrada robo
 .intro {
   height: 750px;
   width: 100%;
   @include degrade-bg;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
-
   .content-intro {
+    -ms-flex-align: center;
     align-items: center;
     padding-top: 200px;
     @include d(m) {
@@ -24,8 +27,11 @@
 }
 .textos {
   @include d(m) {
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: 0 auto;
   }
@@ -182,6 +188,7 @@
   }
   @include d(m) {
     position: relative;
+    -ms-flex-order: -1;
     order: -1;
     top: 0px;
     margin-left: -30px;

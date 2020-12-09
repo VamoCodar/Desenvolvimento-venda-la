@@ -83,7 +83,6 @@ $footer-color: #fafafa;
   background-size: contain;
   background-position: center;
 }
-
 /* arquivo prefixado leia a documentação para saber como editar 
 copiar do body pra baixo pra desprefixar */
 
@@ -99,13 +98,13 @@ copiar do body pra baixo pra desprefixar */
 @import "bootstrap/code";
 @import "bootstrap/grid"; //usado colunas e row
 //@import "bootstrap/tables";
-//@import "bootstrap/forms";
+@import "bootstrap/forms";
 //@import "bootstrap/buttons";
 //@import "bootstrap/transitions";
 @import "bootstrap/dropdown";
 //@import "bootstrap/button-group";
-//@import "bootstrap/input-group";
-//@import "bootstrap/custom-forms";
+@import "bootstrap/input-group";
+@import "bootstrap/custom-forms";
 //@import "bootstrap/nav";
 //@import "bootstrap/navbar";
 //@import "bootstrap/card";
@@ -229,45 +228,20 @@ html {
   .dropdown-toggle {
     margin-top: 0px;
   }
-}
-#formulario .dados {
-  h1 {
-    @include titulo(32px);
-    margin-bottom: 20px;
-    line-height: 50px;
+  //titulo das categorias
+  h5 {
+    font-weight: 700;
+    font-size: 16px;
   }
-  p {
-    font: normal normal normal 17px/25px Rubik;
-  }
-  .bloco-2 {
-    margin-top: 40px;
-    a {
-      color: white;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    p:before {
-      content: "";
-      @include bg-props;
-      background-image: url(../img/icon/contato/venda_la_localizacao.svg);
-      width: 25px;
-      height: 25px;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 10px;
-    }
-    p.contato:before {
-      background-image: url(../img/icon/contato/venda_la_e_mail.svg);
-    }
-    p.tel:before {
-      background-image: url(../img/icon/contato/venda_la_telefonepng.svg);
-    }
-    p.whats:before {
-      background-image: url(../img/icon/contato/venda_la_whatsapp.svg);
+  .loja {
+    p {
+      color: #fff;
+      margin-bottom: 2px;
+      font-size: 12px;
     }
   }
 }
+
 .duo {
   .campo {
     max-width: 50%;
@@ -290,4 +264,30 @@ html {
   [type="checkbox"] {
     cursor: pointer;
   }
+}
+label {
+  color: #fff;
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.loja {
+  input {
+    background: #edeff2;
+  }
+}
+.input-group-text {
+  font-size: 12px;
+  font-weight: 700;
+  background: white;
+  border: transparent;
+  color: #707070;
+}
+.mobile .campo label {
+  margin-top: 5px;
+}
+.text p {
+  font-size: 14px;
+  margin-bottom: 15px;
 }

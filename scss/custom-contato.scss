@@ -1,3 +1,6 @@
+/* arquivo prefixado leia a documentação para saber como editar 
+copiar do body pra baixo pra desprefixar */
+
 //variaveis do projeto
 $poppins: "Poppins", sans-serif;
 $rubik: "Rubik", sans-serif;
@@ -152,6 +155,10 @@ html {
   position: relative;
 }
 
+::-moz-selection {
+  background: #54d39b;
+}
+
 ::selection {
   background: #54d39b;
 }
@@ -172,9 +179,11 @@ html {
     }
   }
   .dados {
+    -ms-flex-order: 2;
     order: 2;
   }
   fieldset {
+    -ms-flex-direction: column;
     flex-direction: column;
     .campo {
       max-width: 90%;

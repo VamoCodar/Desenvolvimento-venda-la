@@ -1,3 +1,6 @@
+/* arquivo prefixado leia a documentação para saber como editar 
+copiar do body pra baixo pra desprefixar */
+
 //variaveis do projeto
 $poppins: "Poppins", sans-serif;
 $rubik: "Rubik", sans-serif;
@@ -140,6 +143,10 @@ html {
   position: relative;
 }
 
+::-moz-selection {
+  background: #54d39b;
+}
+
 ::selection {
   background: #54d39b;
 }
@@ -150,9 +157,13 @@ html {
   @include degrade-bg;
   padding-bottom: 50px;
   position: relative;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   p {
     @include subtitulo-center;
