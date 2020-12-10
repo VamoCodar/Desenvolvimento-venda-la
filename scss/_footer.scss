@@ -91,3 +91,12 @@ footer li a:hover {
     color: $azul-claro;
   }
 }
+.mobile .direito {
+  align-items: center;
+  justify-content: center !important;
+  flex-direction: column;
+  p:first-child {
+    order: 2;
+    margin: 15px;
+  }
+}
