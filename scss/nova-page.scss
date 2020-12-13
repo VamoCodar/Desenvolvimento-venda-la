@@ -1,0 +1,447 @@
+/* arquivo prefixado leia a documentação para saber como editar 
+copiar do body pra baixo pra desprefixar */
+
+//variaveis do projeto
+$poppins: "Poppins", sans-serif;
+$rubik: "Rubik", sans-serif;
+$box-shadow: 0px 3px 6px #00000029;
+$preto-claro: #7b7b7b;
+$azul-claro: #71a1ff;
+$gradiente-azul: linear-gradient(55.35deg, #ffb996 23.24%, #ff5e81 142.28%);
+$footer-color: #fafafa;
+//estilos abaixo dos includes
+//mixins
+@mixin degrade {
+  //degrade dos botoe
+  background: transparent linear-gradient(270deg, #92d275 0%, #19d9b4e6 100%) 0%
+    0% no-repeat padding-box;
+}
+//degrades dos bg
+@mixin degrade-bg2 {
+  background: transparent
+    linear-gradient(51deg, #7d8dff 0%, #7a92ff 0%, #56cbff 0%, #7a92ff 100%) 0%
+    0% no-repeat padding-box;
+}
+
+@mixin degrade-bg3 {
+  background: transparent linear-gradient(64deg, #7d8dff 0%, #56cbff 100%) 0% 0%
+    no-repeat padding-box;
+}
+@mixin degrade-bg {
+  background: transparent linear-gradient(60deg, #7d8dff 0%, #56cbff 100%) 0% 0%
+    no-repeat padding-box;
+}
+
+//titulos
+@mixin titulo($tamanho: 40px) {
+  font-family: $poppins;
+  font-weight: 700;
+  font-size: $tamanho;
+  @include d(s) {
+    font-size: 24px;
+  }
+}
+//estilo do botao
+@mixin botao($tamanho: 18px) {
+  @include degrade;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: $white;
+  font-family: $poppins;
+  font-size: $tamanho;
+  font-weight: 500;
+  transition: 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.06);
+  }
+}
+@mixin botao-b2w($tamanho: 18px) {
+  border: 1px solid #11998e;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #11998e;
+  font-family: $poppins;
+  font-size: $tamanho;
+  font-weight: 500;
+  transition: 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.06);
+  }
+}
+//subtitulos centralizados
+
+@mixin subtitulo-center {
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+  color: $preto-claro;
+  @include d(s) {
+    font-size: 16px;
+  }
+}
+@mixin subtitulo {
+  max-width: 500px;
+  display: block;
+  color: $preto-claro;
+  font-size: 16px;
+  font-family: $poppins;
+}
+@mixin bg-props {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+//imports bootstrap
+//comentados os features que n estão sendo usados
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/root";
+//@import "bootstrap/reboot";
+@import "bootstrap/type"; //pegando algumas margins
+//@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/grid"; //usado colunas e row
+//@import "bootstrap/tables";
+//@import "bootstrap/forms";
+//@import "bootstrap/buttons";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+//@import "bootstrap/button-group";
+//@import "bootstrap/input-group";
+//@import "bootstrap/custom-forms";
+//@import "bootstrap/nav";
+@import "bootstrap/navbar";
+//@import "bootstrap/card";
+//@import "bootstrap/breadcrumb";
+//@import "bootstrap/pagination";
+//@import "bootstrap/badge";
+//@import "bootstrap/jumbotron";
+//@import "bootstrap/alert";
+//@import "bootstrap/progress";
+//@import "bootstrap/media";
+//@import "bootstrap/list-group";
+//@import "bootstrap/close";
+//@import "bootstrap/toasts";
+//@import "bootstrap/modal";
+//@import "bootstrap/tooltip";
+//@import "bootstrap/popover";
+//@import "bootstrap/carousel";
+//@import "bootstrap/spinners";
+@import "bootstrap/utilities"; //usado para alinhamento de textos e etc
+@import "bootstrap/print";
+
+//import arquivos feitos a mão sass
+@import "reset";
+@import "responsivo";
+@import "menu";
+@import "animations";
+//deixar gormulario e footer sempre abaixo
+@import "footer";
+@import "formulario";
+
+//variaveis bootstrap
+$navbar-light-color: transparent;
+$dropdown-border-color: transparent;
+
+body {
+  font-family: $rubik;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding-right: 25px;
+  padding-left: 25px;
+  position: relative;
+}
+
+::-moz-selection {
+  background: #54d39b;
+}
+
+::selection {
+  background: #54d39b;
+}
+
+//estilos da pagina integrações
+.principal {
+  height: 390px;
+  @include degrade-bg;
+  padding-bottom: 50px;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  p {
+    @include subtitulo-center;
+  }
+  @include d(s) {
+    height: 300px;
+  }
+  .textos {
+    margin: auto 0;
+    padding-top: 60px;
+  }
+}
+//titulo preto
+.titulo-integracoes {
+  @include titulo(38px);
+  @include d(m) {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+//ondas
+.waves {
+  background-image: url(../img/waves.svg);
+  background-repeat: no-repeat;
+  display: block;
+  background-position: bottom;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -1px;
+}
+
+#b2w {
+  .container-b2w {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      @include titulo(32px);
+    }
+    p {
+      @include subtitulo;
+      max-width: initial;
+      margin-bottom: 30px;
+    }
+    .integrar {
+      @include botao(16px);
+      display: inline-block;
+      margin-right: 25px;
+      @include d(s) {
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 200px;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 0 auto;
+      }
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.06);
+      }
+    }
+    .visitar {
+      @include botao-b2w(16px);
+      display: inline-block;
+      @include d(s) {
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 230px;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.06);
+      }
+    }
+  }
+}
+
+.cards-coloridos {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin-top: 40px;
+  a {
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px #00000029;
+    max-width: 320px;
+    min-width: 250px;
+    display: block;
+    transition: 0.3s;
+    margin: 15px 15px;
+
+    &:hover {
+      transform: scale(1.04);
+      box-shadow: 2px 4px 4px rgba(99, 67, 67, 0.3);
+    }
+    @include d(m) {
+      padding: 30px 15px;
+      margin: 15px 0;
+      width: 250px;
+    }
+  }
+  p {
+    font-size: 14px;
+  }
+
+  img {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    @include d(m) {
+      margin-bottom: 20px;
+    }
+  }
+  .color-1 {
+    background: #f02d2c 0% 0% no-repeat padding-box;
+  }
+  .color-2 {
+    background: #00adef 0% 0% no-repeat padding-box;
+  }
+  .color-3 {
+    background: #ffb016 0% 0% no-repeat padding-box;
+  }
+}
+
+//beneficios
+.bloco-beneficios {
+  margin-bottom: 60px;
+  margin-top: 60px;
+  h2 {
+    @include titulo(32px);
+    margin-bottom: 30px;
+  }
+  .items {
+    div {
+      padding: 25px 10px;
+      max-width: 300px;
+      background: #fafafa 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 8px;
+      margin: 30px 20px;
+      text-align: center;
+      display: inline-block;
+      -ms-flex: 0 0 300px;
+      flex: 0 0 300px;
+      text-align: center;
+      font: normal normal 600 22px/30px Poppins;
+      letter-spacing: 0px;
+      color: #000000;
+      @include d(ss) {
+        font-size: 16px;
+        max-width: 250px;
+        -ms-flex: 0 0 250px;
+        flex: 0 0 250px;
+        margin: 15px 10px;
+      }
+    }
+  }
+}
+
+.integrar {
+  @include botao(16px);
+  display: inline-block;
+  margin-right: 25px;
+  margin: 20px auto;
+  max-width: 200px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 15px 10px;
+  @include d(s) {
+  }
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.06);
+  }
+}
+.diferenciais {
+  margin-bottom: 60px;
+  h2 {
+    @include titulo(32px);
+  }
+  h3 {
+    @include titulo(20px);
+  }
+}
+
+.recursos {
+  margin: 80px 0;
+  h2 {
+    @include titulo(32px);
+    margin-bottom: 40px;
+  }
+  .card {
+    button {
+      background-color: white;
+      display: block;
+      border: 1px solid #eeeeee;
+      width: 100%;
+      padding: 20px 0;
+      text-align: start;
+      @include titulo(22px);
+      cursor: pointer;
+      @include d(s) {
+        font-size: 18px;
+      }
+      &[aria-expanded="false"] {
+        &:before {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 10px;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 8px solid black;
+          margin-left: 10px;
+          transition: 0.3s;
+        }
+      }
+      &[aria-expanded="true"] {
+        &:before {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 10px;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-bottom: 8px solid black;
+          margin-left: 10px;
+          transition: 0.3s;
+        }
+      }
+    }
+    .card-body {
+      p {
+        border: 1px solid #eeeeee;
+        color: #707070;
+        display: block;
+        padding: 20px;
+        @include d(s) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
