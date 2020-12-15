@@ -154,7 +154,7 @@
             <div class=" row justify-content-center container-video-texto">
 
                 <div class=" col-lg-8 embed-responsive embed-responsive-16by9 video">
-                    <img src="img/video-play.png" alt="video imagem">
+                    <img loading="lazy" src="img/video-play.png" alt="video imagem">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ojcTU8c4coA" allowfullscreen loading="lazy" ></iframe>
                 </div>
                 <div class="col-lg-4 container-text ">
@@ -299,7 +299,7 @@
                 </div>
                 <div class="col-lg-6 video2-container">
                     <div class=" col-lg-8 embed-responsive embed-responsive-16by9 video video2">
-                        <img src="img/video-play.png" alt="video imagem">
+                        <img loading="lazy" src="img/video-play.png" alt="video imagem">
                         <iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/ojcTU8c4coA" allowfullscreen></iframe>
                     </div>
                 </div>
@@ -603,11 +603,7 @@
 
     <script>
 
-        //preload
-        function preload() {
-            images[0] = new Image();
-            images[0].src = "img/gif-venda-la-2.gif";
-        }
+     
 
         /* script para colocar a imagem em cima do video  enquanto carrega*/
         $(function () {
